@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Huining Li</title>
+    <link>https://huining-li.github.io/</link>
+    <description>Recent content on Huining Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://huining-li.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining joined NC State CSC department and will teach CSC 591/791 Mobile Health Systems and Applications in Fall 2024. Welcome to take my course!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 30 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining is honored to receive the Harold O. Wolf Achievement Award (highest graduate achievement award) from UB School of Engineering and Applied Sciences. Thanks to my advisor! Thanks UB CSE!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Alexander Gherardi, Tianyu Chen, &lt;strong&gt;Huining Li&lt;/strong&gt;, Jun Xia, Wenyao Xu  &amp;ldquo;TinyMSI: A Cost-Effective Handheld Device for Non-contact Diabetic Wound Monitoring&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 32, June 2024. &lt;a href=&#34;https://huining-li.github.io/papers/tinymsi.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining Li passed dissertation defense. Thanks to all the people who have supported me to finish my Ph.D. degree!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Xiaoye Qian, Ruokai Ma, Chenhan Xu, Zhengxiong Li, Dongmei Li, Feng Lin, Ming-Chun Huang, Wenyao Xu, &amp;ldquo;TherapyPal: Towards a Privacy-Preserving Companion Diagnostic Tool based on Digital Symptomatic Phenotyping&amp;rdquo;, &lt;em&gt;ACM International Conference on Mobile Computing and Networking&lt;/em&gt; (&lt;strong&gt;MobiCom’23&lt;/strong&gt;), Madrid, Spain, October 2023. &lt;a href=&#34;https://huining-li.github.io/papers/therapypal.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining is named among the EECS Rising Stars in 2023.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 02 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Soumyadeep Bhattacharjee, &lt;strong&gt;Huining Li&lt;/strong&gt;, Jun Xia, Wenyao Xu,  &amp;ldquo;SimPPG: Self-Supervised Photoplethysmography based Heart-rate Estimation via Similarity-Enhanced Instance Discrimination&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 28, June 2023. &lt;a href=&#34;https://huining-li.github.io/papers/simppg.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Tianyu Chen*, Alexander Gherardi, Anarghya Das, &lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Wenyao Xu,  &amp;ldquo;VANet: An Intuitive Light-Weight Deep Learning Solution Towards Ventricular Arrhythmia Detection&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 28, June 2023. &lt;a href=&#34;https://huining-li.github.io/papers/vanet.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course is a study of the evolution of computer architecture and the factors influencing the design of hardware and software elements of computer systems. Topics may include: instruction set design; processor micro-architecture and pipelining; cache and virtual memory organizations; protection and sharing; I/O and interrupts; in-order and out-of-order superscalar architectures; VLIW machines; vector supercomputers; multithreaded architectures; symmetric multiprocessors; and parallel computers. We will also address the modern computing unit design, such as Field-Programmable Gate Array (FPGA) architectures. Through lectures, assignments and projects, the students in the course will learn the fundamentals of modern micro-processors and reconfigurable computing units.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our MindVoice project won the IEEE EPICS (Engineering Projects in Community Service) award. The project will enhance voice user interface for older adults with cognitive disabilities.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;ACM Transactions on Computing for Healthcare (HEALTH) [2023]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Aditya Singh Rathore, Zhengxiong Li, Hanbin Zhang, Chen Song, Kun Wang, Lu Su, Feng Lin, Kui Ren, Wenyao Xu,  &amp;ldquo;VocalPrint: A mmWave-based Unmediated Vocal Sensing System for Secure Authentication&amp;rdquo;, &lt;em&gt;IEEE Transactions on Mobile Computing&lt;/em&gt; (&lt;strong&gt;TMC&#39;23&lt;/strong&gt;), Volume 22, Number 1, Pages 589 - 606, January 2023. &lt;a href=&#34;https://huining-li.github.io/papers/tmc_vocalprint.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 02 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Huan Chen, Chenhan Xu, Zhengxiong Li, Hanbin Zhang, Xiaoye Qian, Dongmei Li, Ming-Chun Huang, Wenyao Xu, &amp;ldquo;NeuralGait: Assessing Brain Health using Your Smartphone&amp;rdquo;, &lt;em&gt;ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies&lt;/em&gt; (&lt;strong&gt;IMWUT/UbiComp’22&lt;/strong&gt;), Volume 6, Number 4, December 2022. &lt;a href=&#34;https://huining-li.github.io/papers/neuralgait.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining served as the research project mentor at Computer Science Club in Williamsville East High School.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Xingyu Chen, Xiaoye Qian, Huan Chen, Zhengxiong Li, Soumyadeep Bhattacharjee, Hanbin Zhang, Ming-Chun Huang, Wenyao Xu,  &amp;ldquo;An Explainable COVID-19 Detection System
+based on Human Sounds&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 26, December 2022. &lt;a href=&#34;https://huining-li.github.io/papers/covid.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Computer Science Club in Williamsville East High School, Research Project Mentor [2022]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 09 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our work “Hearing Heartbeat from Voice: Towards Next Generation Voice-User Interfaces with Cardiac Sensing Function” is selected as one of the 2022 ACM SenSys Best Paper Award Candidates (7 out of 209).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 08 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our interdisciplinary work on smartphone-based ulcer care won the 2022 ACM SenSys Best Poster Paper Award Runner-up (2 out of 35).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 02 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Chenhan Xu, Tianyu Chen, &lt;strong&gt;Huining Li&lt;/strong&gt;, Alexander Gherardi, Michelle Weng, Zhengxiong Li, Wenyao Xu, &amp;ldquo;Hearing Heartbeat from Voice: Towards Next Generation Voice-User Interfaces with Cardiac Sensing Function&amp;rdquo;, &lt;em&gt;ACM Conference on Embedded Networked Sensor Systems&lt;/em&gt; (&lt;strong&gt;SenSys’22&lt;/strong&gt;), Boston, MA, Nov. 2022. (Acceptance Rate: 24.8%, 52 out of 209)(
+
+
+&lt;span style=&#34;
+    color: red;
+    &#34;&gt;
+    Best Paper Award Candidate
+&lt;/span&gt;, 7 out of 209) &lt;a href=&#34;https://huining-li.github.io/papers/vocalhr.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 01 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Wenhan Zheng, Aditya Pandya, Chenhan Xu, Jun Xia, Wenyao Xu, &amp;ldquo;Poster Abstract: Smartphone-based Blood Perfusion Assessment for Ulcer Care&amp;rdquo;, &lt;em&gt;ACM Conference on Embedded Networked Sensor Systems&lt;/em&gt; (&lt;strong&gt;SenSys’22&lt;/strong&gt;), Boston, MA, Nov. 2022. (
+
+
+&lt;span style=&#34;
+    color: red;
+    &#34;&gt;
+    Best Poster Award Runner-up
+&lt;/span&gt;, 2 out of 35, 5.7%) &lt;a href=&#34;https://huining-li.github.io/papers/perfusion.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining gave a Lightning Talk about a Privacy-Preserving Mobile Companion Diagnostic Tool for Treatment Effectiveness Monitoring at NSF-NIH Smart and Connected Health workshop.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 01 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Wenhan Zheng, Huijuan Zhang, Chuqin Huang, Kaylin McQuillan, &lt;strong&gt;Huining Li&lt;/strong&gt;, Wenyao Xu, Jun Xia, &amp;ldquo;Deep-E Enhanced Photoacoustic Tomography using Three-dimensional Reconstruction
+for High-quality Vascular Imaging&amp;rdquo;, &lt;em&gt;DMPI Sensors&lt;/em&gt; (&lt;strong&gt;Sensors&lt;/strong&gt;), October 2022. [PDF]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 20 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining received the IEEE TCI (Technical Committee on the Internet) Travel Award from IEEE/ACM CHASE conference.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;IEEE Internet of Things Journal (IOTJ) [2021, 2022]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our work ``The Visual Accelerometer&amp;rsquo;&amp;rsquo; won the Best Student Paper Award (2 out of 109) in IEEE International Conference on Health Informatics (ICHI’22).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining received the 2022 Grace Hopper Celebration of Women in Computing scholarship.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Zetao Zhu, Huining Li, Jian Xiao, Wenyao Xu, Ming-Chun Huang, &amp;ldquo;A Fitness Training Optimization System Based On Heart Rate Prediction Under Different Activities&amp;rdquo;, &lt;em&gt;Elsevier Methods&lt;/em&gt; (&lt;strong&gt;Methods&lt;/strong&gt;), Volume 205, Pages 89-96, June 2022. [PDF]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Chenhan Xu, &lt;strong&gt;Huining Li&lt;/strong&gt;, Zhengxiong Li, Xingyu Chen, Aditya Singh Rathore, Hanbin Zhang, Kun Wang, Wenyao Xu, &amp;ldquo;The Visual Accelerometer: A High-fidelity Optic-to-Inertial Transformation Framework for Wearable Health Computing&amp;rdquo;, &lt;em&gt;EEE International Conference on Health Informatics&lt;/em&gt; (&lt;strong&gt;ICHI’22&lt;/strong&gt;), Rochester, MN, June 2022. (
+
+
+&lt;span style=&#34;
+    color: red;
+    &#34;&gt;
+    Best Student Paper Award
+&lt;/span&gt;, 2 out of 109, 1.8%) &lt;a href=&#34;https://huining-li.github.io/papers/visualacc.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 13 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining passed Ph.D. qualifying exam</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining served as the Digital Support Co-Chair at 2nd International Workshop on Cyber-Physical-Human Systems Design and Implementation (CPHS&#39;22).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;2nd International Workshop on Cyber-Physical-Human Systems Design and Implementation, Digital Support Co-Chair [2022]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 02 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Enhao Zheng, Zijian Zhong, Chenhan Xu, Nicole Roma, Steven Lamkin, Tania T Von Visger, Yu-Ping Chang, Wenyao Xu,  &amp;ldquo;Stress prediction using micro-EMA and machine
+learning during COVID-19 social isolation&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 23, March 2022. &lt;a href=&#34;https://huining-li.github.io/papers/stress.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining gave a Pitch Talk about Non-contact Assessment of Pressure Ulcer using Magic Smartphone at Western New York Panasci Competition.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Huan Chen, Chenhan Xu, Anarghya Das, Xingyu Chen, Zhengxiong Li, Jian Xiao, Ming-Chun Huang, Wenyao Xu, &amp;ldquo;Privacy computing using deep compression learning techniques for neural decoding&amp;rdquo;, &lt;em&gt;Elsevier Smart Health&lt;/em&gt; (&lt;strong&gt;SH&lt;/strong&gt;), Volume 23, March 2022. &lt;a href=&#34;https://huining-li.github.io/papers/neural_decoding.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 01 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Zhengxiong Li, Baicheng Chen, Xingyu Chen, &lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Chris Xiaoxuan Lu, Feng Lin, Kui Ren, Wenyao Xu, &amp;ldquo;SpiralSpy: Exploring a Stealthy and Practical Covert Channel
+to Attack Air-gapped Computing Devices via mmWave Sensing&amp;rdquo;, &lt;em&gt;The Network and Distributed System Security Symposium&lt;/em&gt; (&lt;strong&gt;NDSS&#39;22&lt;/strong&gt;), San Diego, California, February 2022. &lt;a href=&#34;https://huining-li.github.io/papers/spiralspy.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Gabriel Guo, Hanbin Zhang, Liuyi Yao, Zhengxiong Li, &lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Wenyao Xu, &amp;ldquo;MSLife Digital Behavioral Phenotyping of Multiple Sclerosis Symptoms in the Wild using Wearables and Graph-Based Statistical Analysis&amp;rdquo;, &lt;em&gt;ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies&lt;/em&gt; (&lt;strong&gt;IMWUT/UbiComp’21&lt;/strong&gt;), Volume 5, Number 4, December 2021. &lt;a href=&#34;https://huining-li.github.io/papers/mslife.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 05 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining won the 2021 UB Blackstone LaunchPad ideas competition.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining received Best Design Honorable Mention in ACM SIGDA University Demonstration at the 58th Design Automation Conference, 2021.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Soumyadeep Bhattacharjee, &lt;strong&gt;Huining Li&lt;/strong&gt;, Wenyao Xu, &amp;ldquo;Anomalous Pattern Recognition in Vital Health Signals via Multimodal Fusion&amp;rdquo;, &lt;em&gt;EAI International Conference on Body Area Networks&lt;/em&gt; (&lt;strong&gt;BodyNet’21&lt;/strong&gt;), Virtual Conference, October 2021. (
+
+
+&lt;span style=&#34;
+    color: red;
+    &#34;&gt;
+    Best Paper Award
+&lt;/span&gt;) &lt;a href=&#34;https://huining-li.github.io/papers/bodynet.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining received the NSF Student Travel Award from IEEE/ACM CHASE conference.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our work “Anomalous Pattern Recognition in Vital Health Signals via Multimodal Fusion” won the Best Paper Award in the 2021 EAI International Conference on Body Area Networks (BodyNet&#39;21).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining led a student team to win the Best Design Award Runner-up in the 2021 IEEE Healthcare Summit (IHS) COVID-19 Data Hackathon (Sensor Informatics Track).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Chenhan Xu, &lt;strong&gt;Huining Li&lt;/strong&gt;, Zhengxiong Li, Hanbin Zhang, Aditya Singh Rathore, Xingyu Chen, Kun Wang, Ming-Chun Huang, Wenyao Xu, &amp;ldquo;CardiacWave: A mmWave-based Scheme of Non-Contact and High-Definition Heart Activity Computing&amp;rdquo;, &lt;em&gt;ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies&lt;/em&gt; (&lt;strong&gt;IMWUT/UbiComp’21&lt;/strong&gt;), Volume 5, Number 3, September 2021. &lt;a href=&#34;https://huining-li.github.io/papers/cardiacwave.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining served as the research project mentor at NSF REU site at UB.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;IEEE International Conference on Computer Communications (INFOCOM) [2021]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course is a study of basic hardware and software issues of computer organization. Topics include computer abstractions and technology, performance evaluation, instruction set architecture, arithmetic logic unit design, advanced computer arithmetic, datapath and control unit design, pipelining, memory hierarchy, input-output. Recent knowledge about computers will be introduced in the class, including accelerator-rich computers, brain-inspired computers and quantum computers.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining presented our work ``VocalPrint&amp;rsquo;&amp;rsquo; Exploring A Resilient and Secure Voice Authentication via mmWave Biometric Interrogation&amp;quot; at 2020 ACM SenSys.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Aditya Singh Rathore, Zhengxiong Li, Hanbin Zhang, Chen Song, Kun Wang, Lu Su, Feng Lin, Kui Ren, Wenyao Xu, &amp;ldquo;VocalPrint: Exploring A Resilient and Secure Voice Authentication via mmWave Biometric Interrogation&amp;rdquo;, &lt;em&gt;ACM Conference on Embedded Networked Sensor Systems&lt;/em&gt; (&lt;strong&gt;SenSys’20&lt;/strong&gt;), Yokohama, Japan, November 2020. &lt;a href=&#34;https://huining-li.github.io/papers/vocalprint.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Baicheng Chen, &lt;strong&gt;Huining Li&lt;/strong&gt;, Zhengxiong Li, Chenhan Xu, Xingyu Chen, Wenyao Xu, &amp;ldquo;ThermoWave: A New Paradigm of Wireless Passive Temperature Monitoring via mmWave Sensing&amp;rdquo;, &lt;em&gt;ACM International Conference on Mobile Computing and Networking&lt;/em&gt; (&lt;strong&gt;MobiCom’20&lt;/strong&gt;), London, UK, October 2020. &lt;a href=&#34;https://huining-li.github.io/papers/thermowave.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Hanbin Zhang, Gabriel Guo, Chen Song, Chenhan Xu, Kevin Cheung, Jasleen Alexis, &lt;strong&gt;Huining Li&lt;/strong&gt;, Dongmei Li, Kun Wang, Wenyao Xu, &amp;ldquo;PDLens: Smartphone Knows Drug Effectiveness among
+Parkinson’s via Daily-Life Activity Fusion&amp;rdquo;, &lt;em&gt;ACM International Conference on Mobile Computing and Networking&lt;/em&gt; (&lt;strong&gt;MobiCom’20&lt;/strong&gt;), London, UK, October 2020. &lt;a href=&#34;https://huining-li.github.io/papers/pdlens.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;IEEE/ACM international conference on Connected Health: Applications, Systems and Engi-
+neering Technologies (CHASE) [2020]&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course provides some of the mathematical foundations and skills that are needed in further study of computer science and engineering. Topics include logic, proofs, sets, functions, relations, recursion,
+recurrence relations, mathematical induction, graphs, trees, basic counting theory, regular languages, and context free grammars. The topics covered explore a number of mathematical concepts and provide fundamental tools necessary to formally express problems using mathematical terminology. This allows for encountered problems to be expressed formally and concisely, in order to prove or derive properties necessary for applications and other solutions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining officially joined UB CSE Ph.D. program under the supervision of Prof. Wenyao.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Our research work on mmWave-scannable paper tagging received the Best Paper Award from the 2019 ACM SenSys Conference (1 out of 144).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Zhengxiong Li, Baicheng Chen, Zhuolin Yang, &lt;strong&gt;Huining Li&lt;/strong&gt;, Chenhan Xu, Xingyu Chen, Kun Wang, and Wenyao Xu, &amp;ldquo;FerroTag: A Paper-based mmWave-Scannable Tagging Infrastructure&amp;rdquo;, &lt;em&gt;ACM Conference on Embedded Networked Sensor Systems&lt;/em&gt; (&lt;strong&gt;SenSys’19&lt;/strong&gt;), New York City, NY, November 2019. (Acceptance Rate: 19%, 28 out of 144) (
+
+
+&lt;span style=&#34;
+    color: red;
+    &#34;&gt;
+    Best Paper Award
+&lt;/span&gt;, 1 out of 144) &lt;a href=&#34;https://huining-li.github.io/papers/ferrotag.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Hanbin Zhang, Chenhan Xu, &lt;strong&gt;Huining Li&lt;/strong&gt;, Aditya Singh Rathore, Chen Song, Zhisheng Yan, Dongmei Li, Feng Lin, Kun Wang, Wenyao Xu, &amp;ldquo;PDMove: Towards Passive Medication Adherence Monitoring of Parkinson’s Disease Using Smartphone-based Gait Assessment&amp;rdquo;, &lt;em&gt;ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies&lt;/em&gt; (&lt;strong&gt;IMWUT/UbiComp’19&lt;/strong&gt;), Volume 3, Number 3, September 2019. &lt;a href=&#34;https://huining-li.github.io/papers/pdmove.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Kun Wang, Toshiaki Miyazaki, Chenhan Xu, Song Guo, Yanfei Sun,  &amp;ldquo;Trust-Enhanced Content Delivery in Blockchain-Based Information-Centric Networking&amp;rdquo;, &lt;em&gt;IEEE Network&lt;/em&gt;, Volume 33, Number 5, September 2019, Pages 183 - 189. &lt;a href=&#34;https://huining-li.github.io/papers/Trust-Enhanced.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 01 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Chenhan Xu, Zhengxiong Li, Hanbin Zhang, Aditya Singh Rathore, &lt;strong&gt;Huining Li&lt;/strong&gt;, Chen Song, Kun Wang, Wenyao Xu, &amp;ldquo;WaveEar: Exploring a mmWave-based Noise-resistant Speech Sensing for Voice-User Interface&amp;rdquo;, &lt;em&gt;ACM International Conference on Mobile Systems, Applications, and Services&lt;/em&gt; (&lt;strong&gt;MobiSys’19&lt;/strong&gt;), Seoul, South Korea, June 2019. &lt;a href=&#34;https://huining-li.github.io/papers/waveear2019.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>Huining visited Prof. Wenyao&amp;rsquo;s research lab. A marvelous research expedition into the realm of mobile computing has commenced.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Kun Wang, &lt;strong&gt;Huining Li&lt;/strong&gt;, Sabita Maharjan, Yan Zhang, and Song Guo,  &amp;ldquo;Green energy scheduling for demand side management in the smart grid&amp;rdquo;, &lt;em&gt;IEEE Transactions on Green Communications and Networking&lt;/em&gt;, Volume 2, Number 2, Pages 596-611, June 2018. &lt;a href=&#34;https://huining-li.github.io/papers/Green_Energy.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;&lt;strong&gt;Huining Li&lt;/strong&gt;, Kun Wang, Xiulong Liu, Yanfei Sun, and Song Guo,  &amp;ldquo;A selective privacy preserving approach for multimedia data&amp;rdquo;, &lt;em&gt;IEEE Multimedia Magazine&lt;/em&gt;, Volume 24, Number 4, Pages 14-25, October-December 2017. &lt;a href=&#34;https://huining-li.github.io/papers/A_Selective.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Tue, 01 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Kun Wang, &lt;strong&gt;Huining Li&lt;/strong&gt;, Yixiong Feng, and Guangdong Tian, &amp;ldquo;Big data analytics for system stability evaluation strategy in the Energy Internet&amp;rdquo;, &lt;em&gt;IEEE Transactions on Industrial Informatics&lt;/em&gt;, Volume 13, Number 4, Pages 1969-1978, Aug. 2017. &lt;a href=&#34;https://huining-li.github.io/papers/Big_Data.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;Kun Wang, Xiaoxuan Hu, &lt;strong&gt;Huining Li&lt;/strong&gt;, Peng Li, Deze Zeng, and Song Guo, &amp;ldquo;A survey on Energy Internet communications for sustainability&amp;rdquo;, &lt;em&gt;IEEE Transactions on Sustainable Computing&lt;/em&gt;, Volume 2, Number 3, Pages 231-254, 1 July-Sept. 2017. &lt;a href=&#34;https://huining-li.github.io/papers/A_Survey.pdf&#34;&gt;[PDF]&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>I am an Assistant Professor of Department of Computer Science in the North Carolina State University. I am looking for highly motivated Ph.D. students/interns/visiting students to join my lab. I received my Ph.D. degree from the Department of Computer Science and Engineering, University at Buffalo, working with Dr. Wenyao Xu. My research interest lies broadly in mobile computing, internet-of-things, and cybersecurity. Especially, my recent focus is on applying research advancement to the field of mobile health (a.</description>
+    </item>
+    
+  </channel>
+</rss>

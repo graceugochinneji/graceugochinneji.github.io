@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teaching on Huining Li</title>
+    <link>https://huining-li.github.io/teaching/</link>
+    <description>Recent content in Teaching on Huining Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://huining-li.github.io/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course is a study of the evolution of computer architecture and the factors influencing the design of hardware and software elements of computer systems. Topics may include: instruction set design; processor micro-architecture and pipelining; cache and virtual memory organizations; protection and sharing; I/O and interrupts; in-order and out-of-order superscalar architectures; VLIW machines; vector supercomputers; multithreaded architectures; symmetric multiprocessors; and parallel computers. We will also address the modern computing unit design, such as Field-Programmable Gate Array (FPGA) architectures. Through lectures, assignments and projects, the students in the course will learn the fundamentals of modern micro-processors and reconfigurable computing units.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course is a study of basic hardware and software issues of computer organization. Topics include computer abstractions and technology, performance evaluation, instruction set architecture, arithmetic logic unit design, advanced computer arithmetic, datapath and control unit design, pipelining, memory hierarchy, input-output. Recent knowledge about computers will be introduced in the class, including accelerator-rich computers, brain-inspired computers and quantum computers.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link></link>
+      <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid></guid>
+      <description>&lt;p&gt;This course provides some of the mathematical foundations and skills that are needed in further study of computer science and engineering. Topics include logic, proofs, sets, functions, relations, recursion,
+recurrence relations, mathematical induction, graphs, trees, basic counting theory, regular languages, and context free grammars. The topics covered explore a number of mathematical concepts and provide fundamental tools necessary to formally express problems using mathematical terminology. This allows for encountered problems to be expressed formally and concisely, in order to prove or derive properties necessary for applications and other solutions.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
