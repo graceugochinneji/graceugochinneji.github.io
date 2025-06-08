@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solar Panel Anomally Classification using SARNet Model | Grace Ugochi Nneji</title>
+  <title>Solar Irradiance Prediction using Attention-SolarMeNet  | Grace Ugochi Nneji</title>
   <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
   <style>
     .project-header {
@@ -41,11 +41,11 @@
 <body>
 
 <div class="project-header">
-  Solar Panel Anomally Classification using SARNet Model
+  Solar Irradiance Prediction using Attention-SolarMeNet 
 </div>
 
 <div class="content-section">
-  <h2>What is SARNet?</h2>
+  <h2>What is SolarMeNet?</h2>
   <p>SArNet is a hybrid deep learning model developed to improve the prediction of solar irradiance using time-series meteorological and irradiance data. It combines the feature extraction strength of CNN-based SolarNet with the temporal learning capabilities of the LSTM-based RadiMeNet, enhanced further by an attention mechanism. This design allows the model to focus on the most relevant parts of the data, improving prediction accuracy and training efficiency.</p>
 
   <div class="button-group">
@@ -53,7 +53,7 @@
     <a href="https://graceugochinneji.github.io/Poster/Cora_Poster" download>Download Poster</a>
   </div>
 
-  <h2>Why was SARNet developed?</h2>
+  <h2>Why was SolarMeNet developed?</h2>
   <p>The integration of renewable energy, particularly solar power, poses challenges for energy grid stability due to fluctuations in irradiance. Traditional forecasting models often fall short in handling temporal dynamics and multi-feature dependencies. Attention-SolarMeNet was created to address these issues by learning spatial-temporal patterns and emphasizing key features through attention, leading to more reliable predictions for grid managers, solar farm operators, and environmental strategists.</p>
 
   <h2>How was the model designed and trained?</h2>
@@ -66,7 +66,7 @@
   <p>Training utilized two open-source datasets from GitHub. Data preprocessing included null value imputation, normalization, and feature engineering. An 80:20 split was used for training and validation. The model was trained using the Adam optimizer, MSE loss, 60 epochs, and batch size of 32.</p>
 
   <h2>What were the results?</h2>
-  <p>SARNet outperformed baseline models across all metrics:</p>
+  <p>SolarMeNet outperformed baseline models across all metrics:</p>
   <ul>
     <li><strong>Dataset 1:</strong> MAE = 0.065, MSE = 0.009, RMSE = 0.098, R² = 0.852</li>
     <li><strong>Dataset 2:</strong> MAE = 0.039, MSE = 0.006, RMSE = 0.081, R² = 0.829</li>
