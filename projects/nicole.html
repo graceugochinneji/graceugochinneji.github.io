@@ -1,92 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
-  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
-  <style>
-    .project-header {
-      text-align: center;
-      background-color: #d9534f;
-      color: #fff;
-      padding: 20px;
-      font-size: 2em;
-    }
-    .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      line-height: 1.6;
-      color: #333;
-    }
-    .button-group {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .button-group a {
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #d9534f;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .button-group a:hover {
-      background-color: #c9302c;
-    }
-  </style>
-</head>
-<body>
-
-<div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
+<div class="button-group" style="text-align: center; margin: 20px;">
+  <a href="https://github.com/jlian2/Tensorflow-Wind-Power-Prediction/blob/master/raw_data.csv" target="_blank" style="padding: 10px 20px; margin: 5px; background-color: #00acc1; color: #fff; border-radius: 5px; text-decoration: none;">Download Dataset 1</a>
+  <a href="https://aistudio.baidu.com/datasetdetail/92257" target="_blank" style="padding: 10px 20px; margin: 5px; background-color: #00acc1; color: #fff; border-radius: 5px; text-decoration: none;">Download Dataset 2</a>
+  <a href="https://graceugochinneji.github.io/Poster/Nicole_Poster.pdf" download style="padding: 10px 20px; margin: 5px; background-color: #ec407a; color: #fff; border-radius: 5px; text-decoration: none;">Download Poster</a>
 </div>
+<section>
+  <h2>Project Overview</h2>
+    <p>This project introduces <strong>Attention-PowerWiNet</strong>, a hybrid deep learning model combining PowerNet, WiNet, and an attention mechanism. It predicts wind power generation using two datasets—one seasonal and one continuous. The model captures both spatial and temporal dependencies in wind energy data and leverages SHAP for interpretability.</p>
+  </section>
 
-<div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
+  <section>
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Developed PowerNet, WiNet, PowerWiNet, and Attention-PowerWiNet architectures.</li>
+      <li>Evaluated model performance on two wind farm datasets.</li>
+      <li>Achieved best performance with Attention-PowerWiNet (MAE: 0.035, R²: 0.906).</li>
+      <li>Implemented SHAP interpretability with 5 types of plots.</li>
+      <li>Designed a user-friendly GUI for model deployment and result visualization.</li>
+    </ul>
+  </section>
 
-  <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
-  </div>
+  <section>
+    <h2>Conclusion</h2>
+    <p>Attention-PowerWiNet demonstrated superior performance across seasonal and continuous datasets. Its integration of attention mechanisms improved both prediction accuracy and model interpretability. The GUI implementation also enhances usability for stakeholders, including wind farm operators and energy managers.</p>
+  </section>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <section>
+    <h2>Limitation</h2>
+    <ul>
+      <li>Limited features: relies heavily on environmental variables without considering geographical or turbine-specific data like topography or fan height.</li>
+      <li>Unassessed abnormal scenarios: model was not tested with extreme weather conditions or system faults.</li>
+    </ul>
+  </section>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+  <section>
+    <h2>Future Work</h2>
+    <ul>
+      <li>Incorporate additional physical attributes such as turbine height, terrain, and maintenance logs.</li>
+      <li>Simulate abnormal conditions (noise, missing data, anomalies) to improve robustness and generalization.</li>
+      <li>Expand real-time deployment capabilities with backend integration and adaptive learning.</li>
+    </ul>
+  </section>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
-
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
-
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
-
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
-</div>
-
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+  <footer>
+    <p>© 2025 Nicole He. Wind Power Forecasting Project.</p>
+  </footer>
 </body>
 </html>
