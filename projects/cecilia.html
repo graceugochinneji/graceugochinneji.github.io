@@ -1,92 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
-  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Secondary Structure Prediction</title>
   <style>
-    .project-header {
-      text-align: center;
-      background-color: #d9534f;
-      color: #fff;
-      padding: 20px;
-      font-size: 2em;
-    }
-    .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
       line-height: 1.6;
-      color: #333;
     }
-    .button-group {
-      text-align: center;
-      margin: 20px 0;
+    h1, h2 {
+      color: #2c3e50;
+    }
+    .section {
+      margin-bottom: 30px;
     }
     .button-group a {
+      display: inline-block;
+      margin-right: 15px;
       padding: 10px 20px;
-      margin: 5px;
-      background-color: #d9534f;
-      color: #fff;
-      border-radius: 5px;
+      background-color: #3498db;
+      color: white;
       text-decoration: none;
-      transition: background-color 0.3s;
+      border-radius: 5px;
     }
     .button-group a:hover {
-      background-color: #c9302c;
+      background-color: #2980b9;
     }
   </style>
 </head>
 <body>
 
-<div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
-</div>
+  <h1>Protein Secondary Structure Prediction Based on Triple Fusion Explainable Model</h1>
 
-<div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
-
-  <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
+  <div class="section">
+    <h2>Project Overview</h2>
+    <p>This project, developed by Cecilia Chu, implements a novel Triple Fusion Explainable Deep Learning Model integrating a Convolutional Structural Predictor (CSP), Self-Attention Convolutional Structural Predictor (Attention-CSP), and Memory-based Structure Network. The model predicts protein secondary structures from sequence data and uses SHAP for result explainability. It was trained and validated using two key datasets.</p>
   </div>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <div class="section">
+    <h2>Download Resources</h2>
+    <div class="button-group">
+      <a href="https://catalog.data.gov/dataset/protein-data-bank-pdb" target="_blank">Download Protein Data Bank (PDB)</a>
+      <a href="https://www.kaggle.com/datasets/kirkdco/protein-secondary-structure-2022" target="_blank">Download Protein Secondary Structure Dataset</a>
+      <a href="https://graceugochinneji.github.io/Poster/Cecilia_Poster.pdf" download>Download Poster</a>
+    </div>
+  </div>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+  <div class="section">
+    <h2>Model Features</h2>
+    <ul>
+      <li>Combines CNNs, Attention, and Memory-based RNNs</li>
+      <li>Utilizes SHAP for interpretability (bar, force, dot, and waterfall plots)</li>
+      <li>Achieved over 95% accuracy and AUC on both datasets</li>
+      <li>Implements early stopping and dropout for regularization</li>
+    </ul>
+  </div>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
+  <div class="section">
+    <h2>Deployment</h2>
+    <p>A GUI has been developed allowing users to input or upload protein sequences and obtain structure classification results along with visual performance metrics and SHAP interpretations.</p>
+  </div>
 
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
-
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
-
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
-</div>
-
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
 </body>
 </html>
