@@ -1,92 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Detection using Attention-SolarNet | Jack Zhang</title>
   <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
   <style>
-    .project-header {
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #3f51b5;
+      color: white;
       text-align: center;
-      background-color: #d9534f;
-      color: #fff;
-      padding: 20px;
-      font-size: 2em;
+      padding: 30px 10px;
     }
     .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      line-height: 1.6;
-      color: #333;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .content-section h2 {
+      color: #3f51b5;
     }
     .button-group {
       text-align: center;
-      margin: 20px 0;
+      margin-top: 30px;
     }
     .button-group a {
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #d9534f;
-      color: #fff;
+      padding: 12px 25px;
+      margin: 10px;
+      background-color: #3f51b5;
+      color: white;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s;
     }
     .button-group a:hover {
-      background-color: #c9302c;
+      background-color: #303f9f;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Cloud Detection and Classification in Radiance Sky Images for Solar Energy Optimization Using Attention-SolarNet</h1>
+  </header>
 
-<div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
-</div>
+  <div class="content-section">
+    <h2>Project Overview</h2>
+    <p>This project presents <strong>Attention-SolarNet</strong>, a deep learning model for detecting and classifying clouds from sky images to enhance solar energy prediction. The architecture incorporates Convolutional Neural Networks (CNNs) with a spatial attention mechanism to dynamically emphasize cloud-relevant regions in images. The system improves solar irradiance forecasting by accurately identifying cloud types and minimizing prediction error. Jack used the NWPU-RESISC45 dataset, consisting of 31,500 images across 45 scene classes. Extensive preprocessing, balancing, and augmentation steps ensured robustness. Attention-SolarNet outperformed baseline CNNs with 95.76% test accuracy, 100% recall, and 94.00% F1-score, significantly reducing test loss to 14.89%.</p>
 
-<div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
+    <div class="button-group">
+      <a href="https://arxiv.org/abs/1703.00121" target="_blank">Download Dataset</a>
+      <a href="https://graceugochinneji.github.io/Poster/Jack_Poster.pdf" download>Download Poster</a>
+    </div>
 
-  <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Developed and compared SolarNet and Attention-SolarNet architectures.</li>
+      <li>Integrated spatial attention mechanism to enhance cloud feature localization.</li>
+      <li>Achieved 95.76% test accuracy, 100% recall, and 94.00% F1-score with Attention-SolarNet.</li>
+      <li>Utilized Grad-CAM for visualization to enhance interpretability.</li>
+      <li>Deployed a GUI for real-time cloud classification and result analysis.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>The Attention-SolarNet model significantly outperformed the baseline SolarNet in accurately detecting clouds under diverse conditions. Its attention mechanism provided improved focus on cloud regions, enabling better generalization and forecasting reliability for solar energy systems. The use of spatial attention was key in enhancing classification accuracy and robustness against overfitting. Grad-CAM visualization and GUI integration further improved interpretability and usability in real-world deployments.</p>
+
+    <h2>Limitation</h2>
+    <ul>
+      <li>The attention mechanism increased training complexity and resource usage.</li>
+      <li>Slight trade-offs in precision due to more false positives in favor of perfect recall.</li>
+      <li>Performance is sensitive to dataset quality and may generalize poorly on low-resolution imagery.</li>
+    </ul>
+
+    <h2>Future Work</h2>
+    <ul>
+      <li>Optimize attention mechanisms for better efficiency and scalability.</li>
+      <li>Explore hybrid architectures combining attention with transfer learning and domain adaptation.</li>
+      <li>Expand datasets across seasons, geographies, and resolutions to improve generalization.</li>
+      <li>Integrate deployment tools for cloud-based or edge-device applications in solar energy management.</li>
+    </ul>
   </div>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
-
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
-
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
-
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
-
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
-
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
-</div>
-
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+  <footer>
+    <p>© 2025 Jack Zhang. Cloud Detection Project using Attention-SolarNet.</p>
+  </footer>
 </body>
 </html>
