@@ -3,65 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protein Secondary Structure Prediction</title>
+  <title>Protein Secondary Structure Prediction | Grace Ugochi Nneji</title>
+  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+    .project-header {
+      text-align: center;
+      background-color: #f39c12;
+      color: #fff;
+      padding: 20px;
+      font-size: 2em;
+    }
+    .content-section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
       line-height: 1.6;
+      color: #333;
     }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    .section {
-      margin-bottom: 30px;
+    .button-group {
+      text-align: center;
+      margin: 20px 0;
     }
     .button-group a {
-      display: inline-block;
-      margin-right: 15px;
       padding: 10px 20px;
-      background-color: #3498db;
-      color: white;
-      text-decoration: none;
+      margin: 5px;
+      background-color: #f39c12;
+      color: #fff;
       border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
     }
     .button-group a:hover {
-      background-color: #2980b9;
+      background-color: #e67e22;
     }
   </style>
 </head>
 <body>
 
-  <h1>Protein Secondary Structure Prediction Based on Triple Fusion Explainable Model</h1>
+<div class="project-header">
+  Protein Secondary Structure Prediction Using Triple Fusion Explainable Model
+</div>
 
-  <div class="section">
-    <h2>Project Overview</h2>
-    <p>This project, developed by Cecilia Chu, implements a novel Triple Fusion Explainable Deep Learning Model integrating a Convolutional Structural Predictor (CSP), Self-Attention Convolutional Structural Predictor (Attention-CSP), and Memory-based Structure Network. The model predicts protein secondary structures from sequence data and uses SHAP for result explainability. It was trained and validated using two key datasets.</p>
+<div class="content-section">
+  <h2>What is this project about?</h2>
+  <p>This project by Cecilia Chu presents a novel deep learning approach for predicting protein secondary structure. The model, termed the Triple Fusion Explainable Model, integrates a Convolutional Structural Predictor (CSP), a Self-Attention CSP, and a Memory-Based Network. The model provides interpretable predictions via SHAP visualizations, enabling better understanding of structural patterns from protein sequences.</p>
+
+  <div class="button-group">
+    <a href="https://catalog.data.gov/dataset/protein-data-bank-pdb" target="_blank">PDB Dataset</a>
+    <a href="https://www.kaggle.com/datasets/kirkdco/protein-secondary-structure-2022" target="_blank">Protein Structure Dataset</a>
+    <a href="https://graceugochinneji.github.io/Poster/Cecilia_Poster.pdf" download>Download Poster</a>
   </div>
 
-  <div class="section">
-    <h2>Download Resources</h2>
-    <div class="button-group">
-      <a href="https://catalog.data.gov/dataset/protein-data-bank-pdb" target="_blank">Download Protein Data Bank (PDB)</a>
-      <a href="https://www.kaggle.com/datasets/kirkdco/protein-secondary-structure-2022" target="_blank">Download Protein Secondary Structure Dataset</a>
-      <a href="https://graceugochinneji.github.io/Poster/Cecilia_Poster.pdf" download>Download Poster</a>
-    </div>
-  </div>
+  <h2>How was it implemented?</h2>
+  <p>The proposed model combines three components:</p>
+  <ul>
+    <li><strong>CSP:</strong> Extracts spatial features through convolutional layers.</li>
+    <li><strong>Attention-CSP:</strong> Enhances CSP with self-attention mechanisms.</li>
+    <li><strong>Memory-Based Network:</strong> Uses recurrent memory cells to retain long-term dependencies in protein sequences.</li>
+  </ul>
+  <p>Training included real-time data augmentation, dropout regularization, and early stopping. The datasets were preprocessed with normalization and sequence filtering. Performance was evaluated using accuracy, AUC, and SHAP interpretability scores.</p>
 
-  <div class="section">
-    <h2>Model Features</h2>
-    <ul>
-      <li>Combines CNNs, Attention, and Memory-based RNNs</li>
-      <li>Utilizes SHAP for interpretability (bar, force, dot, and waterfall plots)</li>
-      <li>Achieved over 95% accuracy and AUC on both datasets</li>
-      <li>Implements early stopping and dropout for regularization</li>
-    </ul>
-  </div>
+  <h2>What were the key results?</h2>
+  <p>The model achieved over 95% accuracy and AUC across both datasets. SHAP bar, dot, and waterfall plots revealed which features most influenced the structure classification.</p>
 
-  <div class="section">
-    <h2>Deployment</h2>
-    <p>A GUI has been developed allowing users to input or upload protein sequences and obtain structure classification results along with visual performance metrics and SHAP interpretations.</p>
-  </div>
+  <h2>Application & Future Work</h2>
+  <p>A user-friendly GUI was developed to allow researchers to input protein sequences and receive predicted structures with SHAP-based insights. Future enhancements may include multi-modal sequence alignment, 3D structural prediction, and incorporation of protein function annotations.</p>
+</div>
 
+<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
 </body>
 </html>
