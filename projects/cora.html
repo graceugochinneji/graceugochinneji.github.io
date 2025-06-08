@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar Panel Anomally Classification using SARNet Model | Grace Ugochi Nneji</title>
   <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
   <style>
     .project-header {
       text-align: center;
-      background-color: #d9534f;
+      background-color: #5bc0de;
       color: #fff;
       padding: 20px;
       font-size: 2em;
@@ -28,63 +27,54 @@
     .button-group a {
       padding: 10px 20px;
       margin: 5px;
-      background-color: #d9534f;
+      background-color: #5bc0de;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s;
     }
     .button-group a:hover {
-      background-color: #c9302c;
+      background-color: #31b0d5;
     }
   </style>
 </head>
 <body>
 
 <div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
+  Solar Panel Anomally Classification using SARNet Model
 </div>
 
 <div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
+  <h2>What is SARNet?</h2>
+  <p>SArNet is a hybrid deep learning model developed to improve the prediction of solar irradiance using time-series meteorological and irradiance data. It combines the feature extraction strength of CNN-based SolarNet with the temporal learning capabilities of the LSTM-based RadiMeNet, enhanced further by an attention mechanism. This design allows the model to focus on the most relevant parts of the data, improving prediction accuracy and training efficiency.</p>
 
   <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
+    <a href="https://github.com/VinTanz/Solar-Energy-Output-Prediction-using-CNN-LSTM" target="_blank">Download Dataset</a>
+    <a href="https://graceugochinneji.github.io/Poster/Cora_Poster" download>Download Poster</a>
   </div>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <h2>Why was SARNet developed?</h2>
+  <p>The integration of renewable energy, particularly solar power, poses challenges for energy grid stability due to fluctuations in irradiance. Traditional forecasting models often fall short in handling temporal dynamics and multi-feature dependencies. Attention-SolarMeNet was created to address these issues by learning spatial-temporal patterns and emphasizing key features through attention, leading to more reliable predictions for grid managers, solar farm operators, and environmental strategists.</p>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+  <h2>How was the model designed and trained?</h2>
+  <p>The architecture consists of three key components:</p>
+  <ul>
+    <li><strong>SolarNet:</strong> A Conv1D network extracting local spatial features from input time-series data.</li>
+    <li><strong>RadiMeNet:</strong> An LSTM layer designed to capture sequential dependencies.</li>
+    <li><strong>Attention Layer:</strong> Adds interpretability and focus by weighting features dynamically.</li>
+  </ul>
+  <p>Training utilized two open-source datasets from GitHub. Data preprocessing included null value imputation, normalization, and feature engineering. An 80:20 split was used for training and validation. The model was trained using the Adam optimizer, MSE loss, 60 epochs, and batch size of 32.</p>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
+  <h2>What were the results?</h2>
+  <p>SARNet outperformed baseline models across all metrics:</p>
+  <ul>
+    <li><strong>Dataset 1:</strong> MAE = 0.065, MSE = 0.009, RMSE = 0.098, R² = 0.852</li>
+    <li><strong>Dataset 2:</strong> MAE = 0.039, MSE = 0.006, RMSE = 0.081, R² = 0.829</li>
+  </ul>
+  <p>Visualizations of SHAP values, MAE loss curves, and prediction overlays confirm the model's stability and generalizability.</p>
 
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
-
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
-
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
+  <h2>What impact does this project have?</h2>
+  <p>This work provides a reliable tool for solar output forecasting with high interpretability. It aids solar energy integration into smart grids, improves energy trading strategies, and supports environmental monitoring initiatives.</p>
 </div>
 
 <script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
