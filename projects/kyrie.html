@@ -1,92 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
-  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explainable Deep Learning for Drug-Target Interaction Prediction using Protein Structures</title>
   <style>
-    .project-header {
-      text-align: center;
-      background-color: #d9534f;
-      color: #fff;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f7f8fa, #e3ecf4);
+      margin: 0;
       padding: 20px;
-      font-size: 2em;
-    }
-    .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      line-height: 1.6;
       color: #333;
     }
-    .button-group {
+    header {
+      background: #22577A;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
       text-align: center;
+    }
+    section {
+      background: white;
       margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .button-group a {
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #d9534f;
-      color: #fff;
-      border-radius: 5px;
+    h2 {
+      color: #22577A;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 15px;
+      background-color: #57CC99;
+      color: white;
       text-decoration: none;
-      transition: background-color 0.3s;
+      border-radius: 5px;
     }
-    .button-group a:hover {
-      background-color: #c9302c;
+    .buttons a:hover {
+      background-color: #38A3A5;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Explainable Deep Learning for Drug-Target Interaction Prediction Using Protein Structures</h1>
+    <p><strong>Student:</strong> Kerui Liu &nbsp;|&nbsp; <strong>Supervisor:</strong> Dr. Grace Ugochi Nneji</p>
+    <p><strong>Module:</strong> CHC 6096 &nbsp;|&nbsp; <strong>Institution:</strong> Chengdu University of Technology - Oxford Brookes College</p>
+  </header>
 
-<div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
-</div>
+  <section>
+    <h2>Abstract</h2>
+    <p>This project presents a hybrid deep learning framework for predicting drug-target interactions (DTIs) using protein structures. The model integrates a Frequent Continuous Substructure (FCS) mining module, Transformer encoders, and CNNs. Trained on BIOSNAP, BindingDB, and DAVIS datasets, the model achieves high AUC, AUPRC, and F1 scores. Explainability is ensured via SHAP and attention maps. A GUI interface supports real-time predictions and visualizations, enhancing accessibility and interpretability for biomedical research.</p>
+  </section>
 
-<div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
+  <section>
+    <h2>Methodology</h2>
+    <ul>
+      <li><strong>Datasets:</strong> BIOSNAP, BindingDB, and DAVIS</li>
+      <li><strong>Preprocessing:</strong> BPE encoding, padding, masking</li>
+      <li><strong>Model Components:</strong>
+        <ul>
+          <li>FCS Mining Module (tokenizes SMILES and protein sequences)</li>
+          <li>Transformer Embedding Module (captures sequence dependencies)</li>
+          <li>Interaction Prediction Module (2D CNN + MLP)</li>
+        </ul>
+      </li>
+      <li><strong>Training Details:</strong> Adam optimizer, BCE loss, dropout, early stopping</li>
+      <li><strong>Evaluation Metrics:</strong> AUC, AUPRC, F1 Score, Loss</li>
+    </ul>
+  </section>
 
-  <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
-  </div>
+  <section>
+    <h2>Results</h2>
+    <p>The final model achieves the following on BIOSNAP:</p>
+    <ul>
+      <li><strong>AUC:</strong> 0.8853</li>
+      <li><strong>AUPRC:</strong> 0.8881</li>
+      <li><strong>F1 Score:</strong> 0.8287</li>
+      <li><strong>Loss:</strong> 0.4683</li>
+    </ul>
+    <p>Performance on DAVIS and BindingDB further confirms its robustness across datasets.</p>
+  </section>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <section>
+    <h2>Explainability</h2>
+    <p>SHAP plots (Force, Summary, Waterfall, Dependency, Bar) were generated for interpretation. Features with the highest impact were identified, and visualization tools assist in understanding individual predictions.</p>
+  </section>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+  <section>
+    <h2>GUI Demo</h2>
+    <p>An interactive Streamlit web interface was built, supporting input of SMILES and protein sequences for real-time predictions, including model visualization, confusion matrix, SHAP results, and probability outcomes.</p>
+  </section>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
+  <section>
+    <h2>Conclusion</h2>
+    <p>This project introduced a hybrid deep-learning model integrating FCS, Transformer, and CNN for interpretable and effective drug-target interaction prediction. Tested across multiple datasets, it demonstrated high performance, robust generalization, and strong explainability. The deployment of a GUI makes the system user-friendly and practical for drug discovery research.</p>
+  </section>
 
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
+  <section>
+    <h2>Limitation</h2>
+    <p>The model uses fixed-length padding, which may lose contextual information. Class imbalance persists, especially with rare interactions, and though mitigated with loss weighting, remains an issue. Additionally, the current convolutional architecture may miss finer-grained structural features.</p>
+  </section>
 
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
+  <section>
+    <h2>Future Work</h2>
+    <p>Future efforts will explore integrating GNNs, 3D protein structure encodings, and transfer learning to enhance generalization. Further optimization of model efficiency and dynamic adaptation to new datasets are also planned.</p>
+  </section>
 
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
-</div>
-
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+  <section class="buttons">
+    <h2>Resources</h2>
+    <a href="https://www.bindingdb.org/rwd/bind/chemsearch/marvin/Download.jsp" target="_blank">Download BindingDB Dataset</a>
+    <a href="https://staff.cs.utu.fi/~aatapa/data/DrugTarget/" target="_blank">Download DAVIS Dataset</a>
+    <a href="http://snap.stanford.edu/biodata/datasets/10002/10002-ChG-Miner.html" target="_blank">Download BIOSNAP Dataset</a>
+    <a href="https://graceugochinneji.github.io/Poster/Kyrie_Poster.pdf" download>Download Poster</a>
+  </section>
 </body>
 </html>
