@@ -1,10 +1,84 @@
-<div class="button-group" style="text-align: center; margin: 20px;">
-  <a href="https://github.com/jlian2/Tensorflow-Wind-Power-Prediction/blob/master/raw_data.csv" target="_blank" style="padding: 10px 20px; margin: 5px; background-color: #00acc1; color: #fff; border-radius: 5px; text-decoration: none;">Download Dataset 1</a>
-  <a href="https://aistudio.baidu.com/datasetdetail/92257" target="_blank" style="padding: 10px 20px; margin: 5px; background-color: #00acc1; color: #fff; border-radius: 5px; text-decoration: none;">Download Dataset 2</a>
-  <a href="https://graceugochinneji.github.io/Poster/Nicole_Poster.pdf" download style="padding: 10px 20px; margin: 5px; background-color: #ec407a; color: #fff; border-radius: 5px; text-decoration: none;">Download Poster</a>
-</div>
-<section>
-  <h2>Project Overview</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wind Power Prediction using Attention-PowerWiNet</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header {
+      background: linear-gradient(to right, #00acc1, #ec407a);
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      padding: 10px 0;
+    }
+    h2 {
+      color: #00796b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .button-group {
+      text-align: center;
+      margin: 20px;
+    }
+    .button-group a {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #00acc1;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button-group a:nth-child(3) {
+      background-color: #ec407a;
+    }
+    .button-group a:hover {
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #ffffff;
+      background-color: #00acc1;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wind Power Prediction using Attention-PowerWiNet</h1>
+  </header>
+
+  <div class="button-group">
+    <a href="https://github.com/jlian2/Tensorflow-Wind-Power-Prediction/blob/master/raw_data.csv" target="_blank">Download Dataset 1</a>
+    <a href="https://aistudio.baidu.com/datasetdetail/92257" target="_blank">Download Dataset 2</a>
+    <a href="https://graceugochinneji.github.io/Poster/Nicole_Poster" download>Download Poster</a>
+  </div>
+
+  <section>
+    <h2>Project Overview</h2>
     <p>This project introduces <strong>Attention-PowerWiNet</strong>, a hybrid deep learning model combining PowerNet, WiNet, and an attention mechanism. It predicts wind power generation using two datasets—one seasonal and one continuous. The model captures both spatial and temporal dependencies in wind energy data and leverages SHAP for interpretability.</p>
   </section>
 
