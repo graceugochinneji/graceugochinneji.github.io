@@ -46,19 +46,19 @@
 
 <div class="content-section">
   <h2>What is this project about?</h2>
-  <p>This project by Cecilia Chu presents a novel deep learning approach for predicting protein secondary structure. The model, termed the Triple Fusion Explainable Model, integrates a Convolutional Structural Predictor (CSP), a Self-Attention CSP, and a Memory-Based Network. The model provides interpretable predictions via SHAP visualizations, enabling better understanding of structural patterns from protein sequences.</p>
+  <p>This project by Cecilia Chu presents a novel deep learning approach for predicting protein secondary structure. The model, termed the Triple Fusion Explainable Model, integrates a Convolutional Structural Predictor (CSP), a Self-Attention Mechanism, and a Memory-Based Network. The model provides interpretable predictions via SHAP visualizations, enabling better understanding of structural patterns from protein sequences.</p>
 
   <div class="button-group">
     <a href="https://catalog.data.gov/dataset/protein-data-bank-pdb" target="_blank">PDB Dataset</a>
     <a href="https://www.kaggle.com/datasets/kirkdco/protein-secondary-structure-2022" target="_blank">Protein Structure Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Cecilia_Poster.pdf" download>Download Poster</a>
+    <a href="https://graceugochinneji.github.io/Poster/Cecilia_Poster" download>Download Poster</a>
   </div>
 
   <h2>How was it implemented?</h2>
   <p>The proposed model combines three components:</p>
   <ul>
     <li><strong>CSP:</strong> Extracts spatial features through convolutional layers.</li>
-    <li><strong>Attention-CSP:</strong> Enhances CSP with self-attention mechanisms.</li>
+    <li><strong>Attention-mechanism:</strong> Enhances CSP with self-attention mechanisms.</li>
     <li><strong>Memory-Based Network:</strong> Uses recurrent memory cells to retain long-term dependencies in protein sequences.</li>
   </ul>
   <p>Training included real-time data augmentation, dropout regularization, and early stopping. The datasets were preprocessed with normalization and sequence filtering. Performance was evaluated using accuracy, AUC, and SHAP interpretability scores.</p>
@@ -66,8 +66,23 @@
   <h2>What were the key results?</h2>
   <p>The model achieved over 95% accuracy and AUC across both datasets. SHAP bar, dot, and waterfall plots revealed which features most influenced the structure classification.</p>
 
-  <h2>Application & Future Work</h2>
-  <p>A user-friendly GUI was developed to allow researchers to input protein sequences and receive predicted structures with SHAP-based insights. Future enhancements may include multi-modal sequence alignment, 3D structural prediction, and incorporation of protein function annotations.</p>
+  <h2>Conclusion</h2>
+  <p>This study presents a robust and interpretable framework for protein secondary structure prediction using deep learning. The integration of CNNs, attention, and memory-based components allowed for high classification accuracy and generalization across two datasets. The explainability provided by SHAP plots supports trust and transparency in model decisions, making the model suitable for biomedical and research applications.</p>
+
+  <h2>Limitations</h2>
+  <ul>
+    <li>Relies on secondary structure labels; does not extend to tertiary structure or protein folding prediction.</li>
+    <li>Interpretability is limited to SHAP approximations and lacks biochemical-level insights.</li>
+    <li>Model training is computationally expensive due to triple-branch architecture.</li>
+  </ul>
+
+  <h2>Future Work</h2>
+  <ul>
+    <li>Extend the framework to predict 3D protein structures and binding affinities.</li>
+    <li>Incorporate multimodal biological data (e.g., amino acid properties, gene expression).</li>
+    <li>Optimize architecture for deployment on low-power devices or web applications.</li>
+    <li>Enhance interpretability through attention heatmaps and domain-specific visualization tools.</li>
+  </ul>
 </div>
 
 <script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
