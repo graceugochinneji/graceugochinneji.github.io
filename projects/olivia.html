@@ -1,92 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protein Structure Prediction using Attention-ProteinMeNet | Olivia Jia</title>
   <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
   <style>
-    .project-header {
-      text-align: center;
-      background-color: #d9534f;
-      color: #fff;
-      padding: 20px;
-      font-size: 2em;
-    }
-    .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      line-height: 1.6;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
       color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #6a1b9a;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     .button-group {
       text-align: center;
       margin: 20px 0;
     }
     .button-group a {
-      padding: 10px 20px;
-      margin: 5px;
-      background-color: #d9534f;
+      padding: 12px 20px;
+      margin: 8px;
+      background-color: #6a1b9a;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
-      transition: background-color 0.3s;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .button-group a:hover {
-      background-color: #c9302c;
+      background-color: #4a148c;
+    }
+    h2 {
+      color: #6a1b9a;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-
-<div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
-</div>
-
-<div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
-
-  <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
+  <div class="header">
+    <h1>Protein Structure Prediction Using Attention-ProteinMeNet</h1>
+    <p>Olivia Jia | Bioinformatics Research | CDUT - Oxford Brookes College</p>
   </div>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <div class="container">
+    <div class="button-group">
+      <a href="https://www.kaggle.com/datasets/samiraalipour/rcsb-pdb-macromolecular-structure-dataset" target="_blank">Download RCSB-PDB Dataset</a>
+      <a href="https://www.kaggle.com/datasets/moklesur/cb513-dataset-for-protein-structure-prediction" target="_blank">Download CB513 Dataset</a>
+      <a href="https://graceugochinneji.github.io/Poster/Olivia_Poster" download>Download Poster</a>
+    </div>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+    <h2>Project Overview</h2>
+    <p>Olivia's project introduces <strong>Attention-ProteinMeNet</strong>, a hybrid deep learning architecture for predicting protein secondary structure. The model combines a deep CNN with a spatial-channel attention mechanism and residual connections to capture both sequential dependencies and contextual structure from protein sequences.</p>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Proposed a CNN-Attention hybrid model called Attention-ProteinMeNet.</li>
+      <li>Evaluated model performance on the CB513 and RCSB-PDB datasets.</li>
+      <li>Integrated spatial and channel-wise attention to enhance structure localization.</li>
+      <li>Achieved high classification accuracy and generalization on unseen sequences.</li>
+      <li>Implemented a GUI tool for sequence input and visual structure prediction output.</li>
+    </ul>
 
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
+    <h2>Conclusion</h2>
+    <p>Attention-ProteinMeNet improved structure prediction accuracy through attention refinement. The model achieved over 85% accuracy on CB513 and effectively generalized to sequences from RCSB-PDB. The combination of convolutional depth, attention, and skip connections yielded robust performance for biomedical applications.</p>
 
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
+    <h2>Limitation</h2>
+    <ul>
+      <li>Model complexity increases inference time for longer protein sequences.</li>
+      <li>Dependent on curated alignment features, which may limit real-time use.</li>
+      <li>Struggles with rare or disordered protein configurations.</li>
+    </ul>
 
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
-</div>
+    <h2>Future Work</h2>
+    <ul>
+      <li>Integrate transformer-based encoders for global dependency modeling.</li>
+      <li>Expand training with noisy sequences to improve robustness.</li>
+      <li>Deploy the model for web-based usage in structural biology labs.</li>
+    </ul>
+  </div>
 
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+  <footer>
+    <p>© 2025 Olivia Jia. Protein Structure Prediction Project using Attention-ProteinMeNet.</p>
+  </footer>
 </body>
 </html>
