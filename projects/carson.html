@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Predicting Solar Energy from Radiance Sky Images using Deep Learning | Grace Ugochi Nneji</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Early Cancer Detection Project | Grace Ugochi Nneji</title>
   <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
   <style>
     .project-header {
       text-align: center;
-      background-color: #d9534f;
+      background-color: #5cb85c;
       color: #fff;
       padding: 20px;
       font-size: 2em;
@@ -28,63 +27,50 @@
     .button-group a {
       padding: 10px 20px;
       margin: 5px;
-      background-color: #d9534f;
+      background-color: #5cb85c;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s;
     }
     .button-group a:hover {
-      background-color: #c9302c;
+      background-color: #4cae4c;
     }
   </style>
 </head>
 <body>
 
 <div class="project-header">
-  Predicting Solar Energy from Radiance Sky Images using Deep Learning
+  Early Cancer Detection Using Multi-Scale CNN and Transformer-Based Deep Learning Approaches
 </div>
 
 <div class="content-section">
-  <h2>What is SolarNow-Attn?</h2>
-  <p>
-    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
-  </p>
+  <h2>What is this project about?</h2>
+  <p>This study introduces a hybrid deep learning model designed to detect early-stage breast cancer from histopathological images. The model integrates EfficientNetV2 for local feature extraction and Vision Transformers (ViTs) for global context analysis, enhanced with Shifted Patch Tokenization (SPT) and Learned-Scale Attention (LSA).</p>
 
   <div class="button-group">
-    <a href="https://purl.stanford.edu/jj716hx9049" target="_blank">Download Dataset</a>
-    <a href="https://graceugochinneji.github.io/Poster/Aura_Poster.pdf" download>Download Poster</a>
+    <a href="https://www.kaggle.com/datasets/ambarish/breakhis" target="_blank">BreakHis Dataset</a>
+    <a href="https://www.kaggle.com/datasets/truthisneverlinear/bach-breast-cancer-histology-images" target="_blank">BACH Dataset</a>
+    <a href="/downloads/Carson_Poster.pptx" download>Download Poster</a>
   </div>
 
-  <h2>Why was SolarNow-Attn developed?</h2>
-  <p>
-    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
-  </p>
+  <h2>How was it implemented?</h2>
+  <p>The architecture features a dual-branch model:</p>
+  <ul>
+    <li><strong>EfficientNetV2:</strong> for compact and efficient local spatial feature extraction.</li>
+    <li><strong>ViT:</strong> for long-range dependency modeling with SPT and LSA enhancements.</li>
+  </ul>
+  <p>The model was trained on BreakHis (70/10/20 split) and validated on BACH (80/20 split), both using oversampling for class balance. Image preprocessing included resizing to 160×160, normalization to [0,1], and real-time augmentation.</p>
 
-  <h2>How was the dataset collected and prepared?</h2>
-  <p>
-    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
-  </p>
+  <h2>What are the key results?</h2>
+  <ul>
+    <li><strong>BreakHis:</strong> Accuracy = 92.1%, AUC = 0.9715, Sensitivity = 94.6%</li>
+    <li><strong>BACH:</strong> Accuracy = 86.7%, AUC = 0.8700, Sensitivity = 92.5%</li>
+  </ul>
+  <p>These outcomes highlight the model’s strong generalization and high sensitivity for early cancer detection tasks across datasets.</p>
 
-  <h2>What model architecture was used?</h2>
-  <p>
-    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
-  </p>
-
-  <h2>Which hyperparameters and tools were used?</h2>
-  <p>
-    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
-  </p>
-
-  <h2>How well did the model perform?</h2>
-  <p>
-    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
-  </p>
-
-  <h2>What are the conclusions and next steps?</h2>
-  <p>
-    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
-  </p>
+  <h2>Conclusion & Future Work</h2>
+  <p>The hybrid CNN+ViT model demonstrates excellent potential for clinical applications in digital pathology. Limitations include its reliance on single-modality image data and high computational demand. Future efforts will focus on multimodal data integration, lightweight transformer architectures, and enhancing interpretability through attention trajectory visualizations.</p>
 </div>
 
 <script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
