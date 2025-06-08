@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SolarNow-Attn Project | Grace Ugochi Nneji</title>
+  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
+
+  <style>
+    .project-header {
+      text-align: center;
+      background-color: #d9534f;
+      color: #fff;
+      padding: 20px;
+      font-size: 2em;
+    }
+    .content-section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .button-group {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .button-group a {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #d9534f;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .button-group a:hover {
+      background-color: #c9302c;
+    }
+  </style>
+</head>
+<body>
+
+<div class="project-header">
+  SolarNow-Attn: Predicting Solar Energy from Sky Images Using Deep Learning
+</div>
+
+<div class="content-section">
+  <h2>What is SolarNow-Attn?</h2>
+  <p>
+    SolarNow-Attn is a deep learning-based system for real-time solar irradiance prediction using radiance sky images. It integrates Convolutional Neural Networks (CNNs) with Squeeze-and-Excitation (SE) Attention mechanisms to forecast photovoltaic (PV) output under dynamic weather conditions.
+  </p>
+
+  <div class="button-group">
+    <a href="Methodology_Aura_Solar_Prediction.pdf" target="_blank">Download PDF</a>
+    <a href="Methodology_Aura_Solar_Prediction.docx" download>Download Word</a>
+  </div>
+
+  <h2>Why was SolarNow-Attn developed?</h2>
+  <p>
+    Accurate solar energy forecasting is vital for maintaining grid stability, especially in areas with high solar penetration. Traditional models relying on historical weather data struggle with real-time adaptability. SolarNow-Attn addresses this by leveraging attention-based CNNs to dynamically interpret cloud patterns and irradiance levels from sky imagery.
+  </p>
+
+  <h2>How was the dataset collected and prepared?</h2>
+  <p>
+    Two datasets from Stanford were used, consisting of high-resolution (2048×2048) fisheye sky images sampled every minute, alongside corresponding PV output data. Preprocessing steps included image resizing (64×64), normalization, alignment of images and PV output, and 10-fold cross-validation with temporal grouping.
+  </p>
+
+  <h2>What model architecture was used?</h2>
+  <p>
+    The model uses two CNN blocks with batch normalization, followed by SE-Attention layers to recalibrate channel features. The extracted features are fed through two fully connected layers with dropout regularization. The final node outputs a single regression value representing solar energy potential.
+  </p>
+
+  <h2>Which hyperparameters and tools were used?</h2>
+  <p>
+    Training was performed using the Adam optimizer with a learning rate of 3×10⁻⁶ and batch size of 32. Dropout rate was set to 0.4. The code was implemented in Python using TensorFlow/Keras and run on a system with Intel i7 CPU and NVIDIA RTX 3050 GPU.
+  </p>
+
+  <h2>How well did the model perform?</h2>
+  <p>
+    Across all metrics, CNN + SE-Attention outperformed baseline models. On Dataset 1, it achieved RMSE of 2.231 and MAE of 1.311. Sunny condition predictions had RMSE < 0.51, while cloudy scenarios showed higher variance. Grad-CAM visualizations confirmed that the model focuses on meteorologically relevant regions like solar disks and cloud edges.
+  </p>
+
+  <h2>What are the conclusions and next steps?</h2>
+  <p>
+    The system provides reliable, interpretable, and efficient short-term solar forecasting. Limitations include reduced generalization on unfamiliar datasets and GPU dependency. Future improvements involve introducing temporal models (ConvLSTM), building lightweight mobile variants, and incorporating hybrid Transformer-CNN architectures.
+  </p>
+</div>
+
+<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+</body>
+</html>
