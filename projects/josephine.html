@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Ensemble Dog-Breed Classification | Josephine Qiao</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      display:inline-block;
+      padding:10px 20px;margin:5px;
+      background:#00acc1;color:#fff;
+      border-radius:5px;
+      text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background:#ec407a;} /* poster tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Stacked-Ensemble CNN for<br>Dog-Breed Classification</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Josephine Qiao designed an ensemble model that stacks three transfer-learned CNNs—<strong>VGG16</strong>,
+    <strong>ResNet-50</strong> and <strong>Inception V3</strong>—to recognise <em>120 dog breeds</em>.  The stacking strategy,
+    coupled with fine-tuning and targeted data-augmentation, delivers high accuracy while
+    mitigating the over-fitting observed in single-network baselines.:contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/competitions/dog-breed-identification/data" target="_blank">Dog-Breed Dataset</a>
+  <a href="https://github.com/JosephineQiao/Ensemble-DogBreed" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Josephine_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Implemented three transfer-learned models and merged them with a <em>stacking</em> meta-learner.</li>
+    <li>Applied rotation, translation, zoom, shear and brightness jitter to balance minority breeds.</li>
+    <li>Introduced early-stopping and learning-rate tuning to curb over-fitting and speed convergence.</li>
+    <li>Achieved <strong>90 % test accuracy</strong> &nbsp;(Macro-F1 ≈ 0.89)&nbsp;— a 3-12 pp boost over the best single network.:contentReference[oaicite:1]{index=1}</li>
+    <li>Packaged the final model in a Flask web app for drag-and-drop breed prediction.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy&nbsp;:</strong> 90.0 %</li>
+    <li><strong>Macro Precision / Recall / F1&nbsp;:</strong> 0.89 / 0.89 / 0.89</li>
+    <li><strong>AUC&nbsp;:</strong> 0.97  <strong>Top-5 Accuracy&nbsp;:</strong> 98 %</li>
+    <li>Outperformed prior single-CNN dog-breed studies by &gt;20 pp on the same dataset.:contentReference[oaicite:2]{index=2}</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Model size (~83 M parameters) limits deployment on very low-power devices.</li>
+    <li>Trained on daylight images—performance under low-light or occlusions needs validation.</li>
+    <li>Relies on Kaggle dog-face crops; full-body or multi-dog scenes may confuse predictions.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Distil the ensemble into a lightweight mobile model without significant accuracy loss.</li>
+    <li>Add attention for body-pose cues and expand to mixed-breed recognition.</li>
+    <li>Collect in-the-wild photographs to improve robustness and test cross-domain generalisation.</li>
+  </ul>
+</section>
+
+<footer>
