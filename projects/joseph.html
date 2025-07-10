@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Deep-Learning IDC Breast-Cancer Recognition | Joseph Zhang</title>
+
+  <!-- =====  PALETTE  (sage → apricot)  ===== -->
+  <style>
+    :root{
+      --bg-start:#eef9f3;      /* very-light sage  */
+      --bg-end:  #fff4ec;      /* pale apricot     */
+      --brand-main:#4c9a7f;    /* sage-green       */
+      --brand-accent:#f39a5b;  /* soft apricot     */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Deep-Learning Application&nbsp;for the<br>Recognition&nbsp;of Breast Cancer&nbsp;(IDC)</h1>
+</header>
+
+<section>
+  <h2>Project&nbsp;Overview</h2>
+  <p>
+    Joseph Zhang built an <strong>AlexNet-based CNN</strong> to detect
+    <em>Invasive Ductal Carcinoma&nbsp;(IDC)</em> from histopathology patches.  
+    After balancing the publicly-available Breast Histopathology dataset and
+    applying flips &amp; resizing, the network achieved an
+    <strong>84.7 % accuracy</strong> on validation images.:contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/paultimothymooney/breast-histopathology-images" target="_blank">IDC Dataset</a>
+  <a href="https://github.com/JosephMajZ/Project_IDC_CNN" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Joseph_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key&nbsp;Contributions</h2>
+  <ul>
+    <li>Balanced the dataset to ~20 k positive / 20 k negative patches before training.:contentReference[oaicite:1]{index=1}</li>
+    <li>Customised AlexNet for binary classification with 224 × 224 inputs.</li>
+    <li>Implemented Tkinter GUI for drag-and-drop IDC prediction in clinics.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results&nbsp;Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy&nbsp;:</strong> 84.7 %</li>
+    <li><strong>Precision&nbsp;:</strong> 95.0 %</li>
+    <li><strong>Recall&nbsp;:</strong> 39.0 %</li>
+    <li><strong>F1-score&nbsp;:</strong> 55.3 %</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Recall is low; model favours negative predictions.</li>
+    <li>Trained on 40× patches only—needs multi-magnification validation.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future&nbsp;Work</h2>
+  <ul>
+    <li>Add ROC/AUC evaluation &amp; larger batch for steadier loss curves.</li>
+    <li>Explore deeper backbones (ResNet, EfficientNet) to raise recall.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Joseph Zhang · IDC Breast-Cancer Recognition Project
+</footer>
+
+</body>
+</html>
