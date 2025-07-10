@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dog Breed Classification with CNN | Fanlin Zhou</title>
+
+  <!-- ===== PALETTE (rose ➜ twilight-indigo) ===== -->
+  <style>
+    :root{
+      --bg-start:#fff4f7;      /* very-light rose  */
+      --bg-end:  #f2f5ff;      /* hint-of indigo   */
+      --brand-main:#d64d79;    /* rose-pink        */
+      --brand-accent:#4b5fd2;  /* twilight indigo  */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dog Breed Classification<br>using Convolutional Neural Networks</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Fanlin Zhou compares three transfer-learning backbones—<strong>VGG-16</strong>,
+    <strong>ResNet-50</strong> and <strong>Xception</strong>—on 10 k images spanning
+    <em>120 dog breeds</em>.  After extensive augmentation and hyper-tuning,
+    Xception edges ahead with&nbsp;91 % top-1 accuracy, while a fine-tuned VGG-16
+    reaches&nbsp;<strong>99 % accuracy</strong> on the training set for rapid identification in shelters,
+    vet clinics and mobile apps.:contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/competitions/dog-breed-identification/data" target="_blank">Dog-Breed Dataset</a>
+  <a href="https://github.com/FanlinZhou/DogBreed-CNN" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Catherine_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Evaluated <strong>VGG-16, ResNet-50 &amp; Xception</strong> with transfer-learning on 120 breeds.</li>
+    <li>Applied rotation, shear, zoom &amp; color-jitter to balance long-tail classes.</li>
+    <li>Fine-tuned VGG-16 to <strong>99 % train / 92 % val accuracy</strong>; Xception topped <strong>91 % top-1</strong> on test.:contentReference[oaicite:1]{index=1}</li>
+    <li>Released a Flask drag-and-drop web demo with Grad-CAM visual explanations.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>VGG-16&nbsp;:</strong> 99 % train · 92 % val</li>
+    <li><strong>ResNet-50&nbsp;:</strong> 95 % train · 81 % val</li>
+    <li><strong>Xception&nbsp;:</strong> 92 % train · 72 % val</li>
+    <li><strong>Macro F1 (best)&nbsp;:</strong> 0.89</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Performance dips on low-light or multi-dog scenes.</li>
+    <li>83 M-param ensemble too heavy for edge micro-controllers.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Distil ensemble to a lightweight mobile model.</li>
+    <li>Add attention for pose cues and mixed-breed detection.</li>
+    <li>Gather in-the-wild photos for cross-domain robustness.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Fanlin Zhou · CNN Dog-Breed Classification Project
+</footer>
+
+</body>
+</html>
