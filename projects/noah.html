@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>DeepSeg-ASPP + Transformer Semantic Segmentation | Xiang Feng</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster button tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DeepSeg-ASPP + Transformer<br>Semantic Segmentation Framework</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Xiang Feng proposes <strong>DeepSeg-ASPP + Transformer</strong>, a high-performance framework for real-time semantic
+    segmentation in autonomous-driving scenarios. The network fuses a depthwise-separable
+    <em>ASPP</em> module, a <em>Transformer encoder</em> for long-range dependencies, edge-detection and
+    context-enhancement sub-blocks, all atop a <strong>ResNet-50</strong> backbone. Trained on Cityscapes,
+    the model balances accuracy with efficiency to meet real-time demands in complex urban scenes.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.cityscapes-dataset.com/" target="_blank">Cityscapes Dataset</a>
+  <a href="https://github.com/NOAHORFX/Project_Data" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Noah_PPT.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li><strong>DWC-ASPP:</strong> depth-wise separable Atrous Spatial Pyramid Pooling for multi-scale context with 40 % fewer FLOPs.</li>
+    <li><strong>Transformer encoder:</strong> 4-head attention layer captures global dependencies beyond CNN receptive fields.</li>
+    <li><strong>Edge &amp; Context modules:</strong> SE-augmented edge block and multi-scale context enhancement improve boundary fidelity.</li>
+    <li><strong>11-class Cityscapes results:</strong> mIoU = 0.77, PA = 0.93, FPS ≈ 63 on RTX 3090 Ti (384 × 384 input).</li>
+    <li>Flask-based GUI enables drag-and-drop image / video / webcam segmentation in real time.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy&nbsp;:</strong> 93.6 %</li>
+    <li><strong>mIoU&nbsp;:</strong> 0.77  <strong>Dice&nbsp;:</strong> 0.85  <strong>Kappa&nbsp;:</strong> 0.90</li>
+    <li><strong>Precision / Recall&nbsp;:</strong> 0.95 / 0.97</li>
+    <li><strong>Throughput&nbsp;:</strong> 63 FPS @ 384 × 384 (RTX 3090 Ti)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Evaluated only on Cityscapes—generalisation to other domains (e.g., KITTI, BDD100K) unverified.</li>
+    <li>Transformer block adds ~15 % VRAM overhead at higher resolutions.</li>
+    <li>Edge cases (heavy rain, night driving) still cause occasional mis-segmentations.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Domain-adaptation training for cross-city and adverse-weather robustness.</li>
+    <li>Model pruning &amp; quantisation for embedded deployment (Jetson Orin / Xavier).</li>
+    <li>Incorporate self-supervised pre-training to reduce labelled-data requirements.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Xiang Feng. Semantic Segmentation Undergraduate Project.
+</footer>
+
+</body>
+</html>
