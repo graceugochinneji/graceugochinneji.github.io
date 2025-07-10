@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tyre Condition Classification with Attention-CNN | Bob (Bian HaoTu)</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;}
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tyre Condition Classification with Attention-CNN</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    This project develops an automatic binary-classification system that distinguishes <em>good</em> and <em>defective</em> tyres from photographic images.  
+    Bob’s lightweight model combines <strong>MobileNetV3</strong> backbones and attention-enhanced ResNet blocks, delivering high accuracy while remaining deployment-friendly for factory-floor hardware.:contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://example.com/tyre-image-dataset" target="_blank">Tyre Image Dataset</a>
+  <a href="https://github.com/BobTyre/Attention-CNN-Tyre-Quality" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Bob_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Implemented three architectures: MobileNetV3-based, improved ResNet18/50, and an integrated ensemble.:contentReference[oaicite:1]{index=1}</li>
+    <li>Introduced channel-wise attention layers to capture subtle tread-wear patterns.</li>
+    <li>Achieved top performance (Accuracy&nbsp;&gt;&nbsp;95&nbsp;%, F1&nbsp;&gt;&nbsp;0.94) on the held-out test set.:contentReference[oaicite:2]{index=2}</li>
+    <li>Delivered a desktop GUI for rapid operator feedback in production lines.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Conclusion</h2>
+  <p>
+    The attention-augmented CNN markedly outperforms manual inspection and plain CNN baselines, offering a reliable, quick and scalable tyre-quality check for the manufacturing industry.:contentReference[oaicite:3]{index=3}
+  </p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Training data comprises a single plant’s imagery—domain shift to other factories remains untested.</li>
+    <li>Extreme lighting conditions occasionally produce misclassifications.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Expand the dataset to include diverse tyre types and lighting setups.:contentReference[oaicite:4]{index=4}</li>
+    <li>Explore transformer-based lightweight models for further accuracy gains.</li>
+    <li>Deploy an edge-AI prototype on an ARM SoC for in-line quality control.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Bob (Bian HaoTu). Tyre-Quality Classification Project.
+</footer>
+
+</body>
+</html>
