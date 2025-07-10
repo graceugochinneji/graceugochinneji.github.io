@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>YOLOv5-Based Automatic License-Plate Detection | Xi Zhu</title>
+
+  <!-- ===== CUSTOM PALETTE (mint ➜ peach, green & coral accents) ===== -->
+  <style>
+    :root{
+      --bg-start:#f6fff8;      /* soft mint            */
+      --bg-end:  #fff9f0;      /* very light peach     */
+      --brand-main:#28a745;    /* fresh green          */
+      --brand-accent:#ff7f50;  /* warm coral           */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#0d6efd;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Automatic License-Plate Detection<br>with Improved YOLOv5 + OCR</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Xi Zhu (student # 201918020310) built a two-stage pipeline that first localises license plates with an <strong>improved YOLOv5</strong> detector &mdash; adding <em>ASPP</em>, adaptive anchors and mosaic augmentation &mdash; then extracts the plate patch and runs <strong>Tesseract OCR</strong> for character recognition.  
+    The system handles varied lighting, skew and motion blur, reaching <strong>88 % end-to-end accuracy</strong> on four combined public datasets.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/code/mpwolke/images-labels-license-plates" target="_blank">Images & Labels Dataset</a>
+  <a href="https://www.kaggle.com/datasets/aslanahmedov/number-plate-detection" target="_blank">Number-Plate Dataset</a>
+  <a href="https://graceugochinneji.github.io/Poster/Vincent_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Enhanced YOLOv5s with <strong>DWC-ASPP</strong> + mosaic augmentation for small-plate detection.</li>
+    <li>Adaptive letter-box resizing that adds minimal padding, boosting FPS ~10 %.</li>
+    <li>Curated &amp; merged <strong>4 datasets / 3 282 images</strong>; performed custom tiling &amp; label harmonisation.</li>
+    <li>Delivered <strong>79 % mAP@0.5</strong> &nbsp;|&nbsp; <em>Precision 0.80 · Recall 0.78 · F1 0.79</em> for detection; overall system accuracy 88 %.</li>
+    <li>Packaged a Flask web demo for real-time plate reading on uploaded images/videos.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Detection mAP@0.5&nbsp;:</strong> 0.79</li>
+    <li><strong>End-to-end license-plate accuracy&nbsp;:</strong> 88 %</li>
+    <li><strong>Inference speed&nbsp;:</strong> 38 ms per frame (RTX 2060, 640×640)</li>
+    <li><strong>False-alarm / miss rate&nbsp;:</strong> 5 % / 7 %</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Performance drops on night-time IR footage &amp; extremely oblique angles.</li>
+    <li>OCR errors for plates under heavy motion blur or mud splatter.</li>
+    <li>Current pipeline (~42 MB) still large for microcontroller deployment.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Add transformer-based detector (YOLOv8-N, RT-DETR) for long-range context.</li>
+    <li>Integrate liveness / spoof-prevention &amp; domain-adaptation for night scenes.</li>
+    <li>Distil model + quantise to INT8 for edge devices (Jetson Nano).</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Xi Zhu &middot; Automatic License-Plate Detection Project
+</footer>
+
+</body>
+</html>
