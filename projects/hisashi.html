@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Separable-CNN Inception-ResNet for Breast-Cancer Histology | ZiXuan Chen</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster button tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Separable-CNN Inception-ResNet for Enhanced Breast-Cancer Classification</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    ZiXuan Chen proposes a hybrid deep-learning pipeline that merges <strong>Separable Convolutions</strong>,
+    <em>Inception</em> modules, <em>ResNet</em> residual blocks, and a lightweight channel-&amp;-spatial attention
+    (CBAM) layer.  Trained on the <em>BreaKHis 400×</em> histopathology set, the ensemble targets early-stage
+    breast-cancer detection while keeping parameter count manageable for clinical deployment.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/ambarish/breakhis" target="_blank">BreaKHis 400× Dataset</a>
+  <a href="https://gitee.com/hibition/incorporating-separable-cnn-in-inception-network-with-residual-learning-for-enhanced-breast-cancer-classification" target="_blank">Gitee Source Code</a>
+  <a href="https://graceugochinneji.github.io/Poster/Hisashi_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Introduced <strong>Separable-CNN blocks</strong> inside Inception paths to cut FLOPs without losing spatial detail.</li>
+    <li>Stacked residual (ResNet-style) skip connections to stabilise deep training.</li>
+    <li>Inserted <em>CBAM</em> attention after each macro-block for fine-grained focus on malignant tissue regions.</li>
+    <li>Employed heavy augmentation plus class-rebalancing to tame BreaKHis’ benign/malignant skew.</li>
+    <li>Released a Flask-based demo with Grad-CAM overlays for pathologist interpretability.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy :</strong> 96.4 %</li>
+    <li><strong>Sensitivity :</strong> 0.968  <strong>Specificity :</strong> 0.977</li>
+    <li><strong>Precision :</strong> 0.974  <strong>F1-Score :</strong> 0.971</li>
+    <li><strong>ROC-AUC :</strong> 0.99 (macro)</li>
+  </ul>
+  <p>
+    The proposed ensemble surpasses vanilla VGG16, ResNet-50, Inception-v3 and several recent
+    DenseNet/EfficientNet baselines reported on the same dataset.
+  </p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Relies on a single-centre dataset—domain shift to other labs remains untested.</li>
+    <li>High-res training (400×) demands a 3070 Ti-class GPU for &lt; 8 hour convergence.</li>
+    <li>No bias-mitigation yet for under-represented histological subtypes.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Cross-institution validation with multi-magnification slides.</li>
+    <li>Knowledge-distillation to a mobile-size model for point-of-care microscopes.</li>
+    <li>Self-supervised pre-training to shrink annotated-data requirements.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 ZiXuan Chen (Hisashi) · Breast-Cancer Histopathology Project
+</footer>
+
+</body>
+</html>
