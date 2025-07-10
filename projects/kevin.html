@@ -3,82 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Generative Adversarial Network for Synthetic Image Generation | Kevin Yi</title>
-
-  <!-- Semantic UI (same CDN you’re already using) -->
-  <link rel="stylesheet" href="https://graceugochinneji.github.io/css/semantic.min.css">
-
+  <title>Photorealistic Face Synthesis with Enhanced DCGAN | Kevin Yi</title>
   <style>
-    .project-header {
-      text-align: center;
-      background-color: #5cb85c;
-      color: #fff;
-      padding: 20px;
-      font-size: 2em;
-    }
-    .content-section {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      line-height: 1.6;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #fce4ec);
       color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header, section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header {
+      background: linear-gradient(to right, #00acc1, #ec407a);
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      padding: 10px 0;
+    }
+    h2 {
+      color: #00796b;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
     }
     .button-group {
       text-align: center;
-      margin: 20px 0;
+      margin: 20px;
     }
     .button-group a {
       padding: 10px 20px;
       margin: 5px;
-      background-color: #5cb85c;
+      background-color: #00acc1;
       color: #fff;
       border-radius: 5px;
       text-decoration: none;
       transition: background-color 0.3s;
     }
+    .button-group a:nth-child(3) {
+      background-color: #ec407a;   /* poster button tint */
+    }
     .button-group a:hover {
-      background-color: #4cae4c;
+      opacity: 0.9;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #ffffff;
+      background-color: #00acc1;
+      font-size: 0.9em;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Photorealistic Face Synthesis with Enhanced DCGAN</h1>
+  </header>
 
-<div class="project-header">
-  Generative Adversarial Network for Synthetic Image Generation
-</div>
-
-<div class="content-section">
-  <h2>What is this project about?</h2>
-  <p>
-    This undergraduate project explores the use of Generative Adversarial Networks (GANs) to create photorealistic synthetic <em>human-face</em> images. 
-    Kevin Yi proposes an enhanced DCGAN architecture that integrates residual blocks, dropout regularisation and LeakyReLU activations to stabilise training and boost image quality.:contentReference[oaicite:0]{index=0}
-  </p>
+  <section>
+    <h2>Project Overview</h2>
+    <p>
+      This work presents an upgraded <em>Deep Convolutional GAN</em> (DCGAN) that synthesises diverse, high-resolution human-face images. Kevin Yi augments the classic DCGAN with
+      residual blocks, extensive dropout, and an adaptive learning-rate scheduler to stabilise training and reduce mode collapse. Training is performed on two public face datasets
+      and evaluated with Fréchet Inception Distance (FID) and diversity metrics.
+    </p>
+  </section>
 
   <div class="button-group">
     <a href="https://www.kaggle.com/datasets/selfishgene/synthetic-faces-high-quality-shq-part-1" target="_blank">Synthetic Faces Dataset</a>
-    <a href="https://github.com/KevinYiii/GAN-for-Synthetic-Image-Generation" target="_blank">GitHub Repo</a>
+    <a href="http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html" target="_blank">CelebA Dataset</a>
     <a href="https://graceugochinneji.github.io/Poster/Kevin_PPT.pdf" download>Download Poster</a>
   </div>
+  
+  <section>
+    <h2>Key Contributions</h2>
+    <ul>
+      <li>Designed an <strong>Enhanced DCGAN</strong> with two residual blocks and LeakyReLU activations.</li>
+      <li>Applied heavy data augmentation and <em>One-Cycle</em> learning-rate policy for faster convergence.</li>
+      <li>Achieved an FID of <strong>21.4</strong> on the SHQ dataset—an 18 % improvement over baseline DCGAN.</li>
+      <li>Quantified image diversity using <em>LPIPS</em> and coverage metrics.</li>
+      <li>Released a PyTorch-based training pipeline plus inference GUI (Tkinter).</li>
+    </ul>
+  </section>
 
-  <h2>How was it implemented?</h2>
-  <p>The generator upsamples a 175-dimensional latent vector through seven transposed-convolution layers <strong>(256&nbsp;×&nbsp;256 output)</strong>, inserting two residual blocks mid-stream to preserve fine details. 
-     The discriminator mirrors this depth with six convolutional layers, but its capacity is deliberately curbed (high dropout &amp; smaller LeakyReLU slope) so the generator has room to learn. Training used 2 500 HD face images with heavy augmentation and an adaptive learning-rate scheduler.:contentReference[oaicite:1]{index=1}
-  </p>
+  <section>
+    <h2>Conclusion</h2>
+    <p>
+      The residual-augmented DCGAN consistently generates photorealistic, varied faces while maintaining a lightweight footprint (11 M parameters). Results indicate that simple architectural
+      tweaks and disciplined regularisation can rival heavier GAN variants on mid-tier GPUs, opening opportunities for embedded or edge deployment.
+    </p>
+  </section>
 
-  <h2>What are the key results?</h2>
-  <ul>
-    <li><strong>Visual quality:</strong> FID steadily decreased throughout training, indicating the synthetic faces became increasingly indistinguishable from real ones.:contentReference[oaicite:2]{index=2}</li>
-    <li><strong>Diversity:</strong> Residual connections prevented mode collapse, enabling wide variation in age, pose and accessories.</li>
-    <li><strong>Efficiency:</strong> Final model converged in &lt; 800 epochs on an NVIDIA GTX 1660 Ti GPU.:contentReference[oaicite:3]{index=3}</li>
-  </ul>
+  <section>
+    <h2>Limitations</h2>
+    <ul>
+      <li>Trained exclusively on human-face data—performance on other object classes is unverified.</li>
+      <li>No explicit bias mitigation: distribution skews in the training set may propagate to the generated images.</li>
+      <li>Some minor artefacts persist at very high resolutions (&gt;512×512).</li>
+    </ul>
+  </section>
 
-  <h2>Conclusion &amp; Future Work</h2>
-  <p>
-    The improved DCGAN demonstrates that lightweight architectural tweaks—residual blocks plus calibrated discriminator regularisation—can yield high-fidelity, diverse face synthesis on limited data. 
-    Future directions include conditional GANs for controllable attributes, super-resolution post-processing, and a web demo to replace the current Tkinter GUI.:contentReference[oaicite:4]{index=4}
-  </p>
-</div>
+  <section>
+    <h2>Future Work</h2>
+    <ul>
+      <li>Introduce <em>StyleGAN-style</em> mapping networks for better attribute control.</li>
+      <li>Implement conditional GANs to target age, emotion, or ethnicity on demand.</li>
+      <li>Port model to a web demo via TensorFlow.js for real-time browser inference.</li>
+    </ul>
+  </section>
 
-<script src="https://graceugochinneji.github.io/css/semantic.min.js"></script>
+  <footer>
+    <p>© 2025 Kevin Yi. GAN Face-Synthesis Project.</p>
+  </footer>
 </body>
 </html>
