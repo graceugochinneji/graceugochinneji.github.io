@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Deep-Learning Skin-Cancer Classification | Hanmin Huang</title>
+
+  <!-- =====  SKY-BLUE → APRICOT PALETTE  ===== -->
+  <style>
+    :root{
+      --bg-start:#f0f9ff;      /* light sky   */
+      --bg-end:  #fff2e8;      /* soft apricot */
+      --brand-main:#3ba3d9;    /* sky blue     */
+      --brand-accent:#ff8e5e;  /* warm coral   */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Deep-Learning Approach for<br>Skin-Cancer Classification</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Hanmin Huang evaluates four <strong>ResNet</strong> backbones (18 / 34 / 50 / 101)
+    on the dermoscopic <em>HAM10000</em> dataset.  
+    After oversampling minority classes with <strong>SMOTE</strong> and augmenting images,
+    <strong>ResNet-18</strong> tops the leaderboard with <strong>96.47 % accuracy</strong>,
+    proving a light-weight network can match—or beat—much deeper models. :contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000" target="_blank">HAM10000 Dataset</a>
+  <a href="https://www.aliyundrive.com/s/RMo2ctV9mig" target="_blank">Code Repository</a>
+  <a href="https://graceugochinneji.github.io/Poster/Hendrix_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Balanced the seven-class dataset (10 015 → 46 935 images) via <strong>SMOTE</strong> oversampling. :contentReference[oaicite:1]{index=1}</li>
+    <li>Compared ResNet-18/34/50/101 under identical hyper-parameters for a fair bake-off.</li>
+    <li>Achieved the best metrics with ResNet-18: Accuracy 96.47 %, F1 96.43 %, Precision 96.47 %. :contentReference[oaicite:2]{index=2}</li>
+    <li>Delivered a Tkinter GUI for drag-and-drop lesion diagnosis in < 1 s per image.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy :</strong> 96.47 %</li>
+    <li><strong>F1-score :</strong> 96.43 %</li>
+    <li><strong>Precision / Recall :</strong> 96.47 % / 96.44 %</li>
+    <li><strong>Best confusion-matrix corrects :</strong> 9 006 / 9 387 samples (ResNet-18). :contentReference[oaicite:3]{index=3}</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Recall still trails precision—model skews slightly toward benign predictions.</li>
+    <li>Training limited to 40× magnification; multi-scale validation pending.</li>
+    <li>Edge-case images with heavy hair occlusion or low light occasionally misclassify.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Integrate attention modules to improve malignant recall.</li>
+    <li>Test transfer-learning on ISIC 2019 for multi-centre robustness.</li>
+    <li>Experiment with EfficientNet-B0 for a lighter mobile deployment.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Hanmin Huang · Deep-Learning Skin-Cancer Classification Project
+</footer>
+
+</body>
+</html>
