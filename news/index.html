@@ -308,15 +308,55 @@ function myFunction() {
     </div>
 </div>
 
-  
-  
-  
-    
+<!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
+  <!-- Lightbox JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
+  <!-- Dynamic Image Loader -->
+  <script>
+    const imageFolder = "https://happymondaynkanta.github.io/news_photos/";
+    const imageList = [
+      { filename: "event1.jpg", caption: "2023 Graduation Photo with Dr. Happy's Project Students" },
+      { filename: "event2.jpg", caption: "Tech Show – 2023" },
+      { filename: "event3.jpg", caption: "Tech Show – 2024" },
+      { filename: "event4.jpg", caption: "Tech Show – 2025" }
+      
+    ];
+
+    const wrapper = document.getElementById("swiper-wrapper");
+    imageList.forEach(img => {
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `
+        <a href=" " data-lightbox="events" data-title="${img.caption}">
+          < img src="${imageFolder}${img.filename}" alt="${img.caption}" />
+          <div class="caption">${img.caption}</div>
+        </a >
+      `;
+      wrapper.appendChild(slide);
+    });
+
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true
+      }
+    });
+  </script>
 </body>
-
 </html>
