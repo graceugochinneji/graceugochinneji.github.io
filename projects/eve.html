@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Inception-Separable CNN for Retinal-Disease Classification | Yifan (Eve) Ke</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      display:inline-block;
+      padding:10px 20px;margin:5px;
+      background:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background:#ec407a;} /* poster button tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Inception + Depthwise-Separable CNN<br>for Retinal-Disease Classification</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Yifan (Eve) Ke proposes a lightweight network that merges <strong>Inception-V3 modules</strong>
+    with <strong>depthwise-separable convolutions</strong> to diagnose four retinal conditions
+    (cataract, diabetic retinopathy, glaucoma, and normal) from OCT images.
+    The hybrid design captures multi-scale features while trimming FLOPs and parameters,
+    delivering fast, accurate screening suitable for clinical decision support.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/gunavenkatdoddi/eye-diseases-classification" target="_blank">Retinal OCT Dataset</a>
+  <a href="https://github.com/Kkkkyf7/Project" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Eve_PPT.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Designed a five-stage <em>Inception A→E</em> backbone enhanced with depthwise-separable convolutions for 40 % fewer parameters.</li>
+    <li>Used aggressive augmentation (random crop, flip, ±20° rotation) and class balancing to curb data imbalance.</li>
+    <li>Achieved <strong>91.9 % validation accuracy</strong> with <em>F1, Precision, Recall ≈ 0.91</em> on the four-class OCT set.</li>
+    <li>Bench-marked against ResNet, VGG-16, MobileNetV2 and outperformed all except a tuned MobileNet-v2 while using less compute.</li>
+    <li>Implemented a Flask GUI with LIME explanations for clinician-friendly, explainable predictions.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy&nbsp;:</strong> 91.9 %</li>
+    <li><strong>Average Precision / Recall / F1&nbsp;:</strong> 0.91&nbsp;/ 0.91&nbsp;/ 0.91</li>
+    <li><strong>Validation Loss&nbsp;:</strong> 0.057</li>
+    <li>Confusion-matrix analysis shows balanced performance across all four classes.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Single-centre OCT dataset — domain shift to other scanners still untested.</li>
+    <li>Model accuracy dips on severely noise-corrupted or low-light scans.</li>
+    <li>No hyper-parameter sweep for optimiser / schedule; potential gains remain.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Cross-institution validation with multi-magnification OCT images.</li>
+    <li>Knowledge-distillation to a micro-model for on-device (mobile) diagnostics.</li>
+    <li>Integrate self-supervised pre-training to cut labelled-data demand.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Yifan (Eve) Ke. Inception + Separable CNN Retinal-Disease Project.
+</footer>
+
+</body>
+</html>
