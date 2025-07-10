@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depthwise-Attention Inception-ResNet for Skin-Cancer Diagnosis | Xinglin Li</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Harnessing Inception-Depthwise-Attention CNN&nbsp;+ Residual Learning<br>for Improved Skin-Cancer Classification</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Xinglin Li (William) proposes a composite network that fuses <strong>depthwise separable convolutions</strong>, 
+    <em>Inception</em> multi-scale paths, <em>ResNet</em> skip connections and a channel–spatial 
+    attention block to boost diagnostic accuracy on dermoscopic images. :contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000" target="_blank">HAM10000 Dataset</a>
+  <a href="https://github.com/WilliamLi98/SkinCancer-Attention-ResNet" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/WilliamLi_PPT.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Introduced a <strong>Depthwise-Inception-ResNet-Attention</strong> block that reduces FLOPs while preserving rich multi-scale features. :contentReference[oaicite:1]{index=1}</li>
+    <li>Applied aggressive data augmentation and class-rebalancing to address HAM10000’s category imbalance. :contentReference[oaicite:2]{index=2}</li>
+    <li>Achieved <strong>98.64 % test accuracy</strong>, F1 = 0.986&nbsp;and ROC-AUC ≈ 0.99, outperforming VGG, EfficientNet and earlier attention-CNN baselines. :contentReference[oaicite:3]{index=3}</li>
+    <li>Released a Grad-CAM–enabled Flask GUI for clinician-friendly, explainable predictions.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Model trained on a single-centre dataset; cross-institution generalisation still unverified. :contentReference[oaicite:4]{index=4}</li>
+    <li>Performance drops on low-light, in-field smartphone images; future work will add domain-adaptation pipelines.</li>
+    <li>Requires a mid-range GPU for &lt; 8 h convergence at 224 × 224 resolution.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Introduce self-supervised pre-training and GAN-based augmentation to cut annotation demand.</li>
+    <li>Prune &amp; quantise network for Raspberry Pi / Jetson-Nano edge deployment.</li>
+    <li>Validate on ISIC-2019 and real-world clinic photos to benchmark domain shift.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Xinglin Li (William). Skin-Cancer Classification Project.
+</footer>
+
+</body>
+</html>
