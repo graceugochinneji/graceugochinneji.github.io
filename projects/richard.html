@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant-Leaf Disease Recognition with Attention-ResNet | Zichao Jin</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster button tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Plant-Leaf Diseases Recognition Using Attention-Enhanced ResNet</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Zichao Jin (Richard) presents a deep-learning pipeline that combines <strong>ResNet</strong>
+    backbones with <em>Channel</em> & <em>Spatial</em> attention blocks for accurate
+    recognition of <strong>38 diseases across 14 crop species</strong>.
+    The model is trained and evaluated on the <em>New Plant Diseases</em> dataset—
+    an augmented edition of PlantVillage—achieving industry-leading performance
+    while remaining compact enough for web deployment via Flask.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset" target="_blank">New Plant Diseases Dataset</a>
+  <a href="https://github.com/RichardJin48/Project" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Richard_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Designed a <strong>ResNet + CBAM</strong> architecture that fuses channel- and spatial-attention for fine-grained lesion focus.</li>
+    <li>Employed extensive rotation, flip, crop and color jitter to counter class imbalance and improve generalisation.</li>
+    <li>Introduced a custom learning-rate scheduler and loss-function switch (MSE → Cross-Entropy) to eliminate over-fitting.</li>
+    <li>Integrated Grad-CAM visualisations and shipped a <strong>Flask GUI</strong> for farmer-friendly, drag-and-drop diagnosis.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy :</strong> 99.29 %</li>
+    <li><strong>Precision / Recall / F1 :</strong> 0.99 / 0.99 / 0.99</li>
+    <li><strong>ROC-AUC :</strong> 1.00  <strong>Average Precision :</strong> 0.99</li>
+  </ul>
+  <p>
+    The model ranks <em>2<sup>nd</sup></em> among recent state-of-the-art plant-disease classifiers and surpasses
+    EfficientNet, DenseNet and previous attention-ResNet baselines on the same dataset.
+  </p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Dataset is lab-captured; performance on in-field, low-light images remains to be verified.</li>
+    <li>38-class softmax occasionally confuses visually similar rusts and blights (<1 % error).</li>
+    <li>Training still requires a mid-range GPU (~11 M parameters).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Collect real-world smartphone photos and retrain with domain-adaptation.</li>
+    <li>Prune &amp; quantise the network for Raspberry Pi / Jetson-Nano edge deployment.</li>
+    <li>Expand the Flask app into a RESTful API for integration with farm-management platforms.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Zichao Jin (Richard). Plant-Disease Recognition Project.
+</footer>
+
+</body>
+</html>
