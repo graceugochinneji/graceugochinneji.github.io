@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Hand-written Digit Recognition with VGG | Liuwei Zheng</title>
+
+  <!-- =====  PALETTE  (mint-cream → blush-pink)  ===== -->
+  <style>
+    :root{
+      --bg-start:#f5fff9;      /* mint-cream        */
+      --bg-end:  #fff6f8;      /* blush-pink        */
+      --brand-main:#31b98e;    /* sea-mint accent   */
+      --brand-accent:#e66aa3;  /* rose accent       */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Recognition of Hand-written<br>Digits with a VGG-16 CNN</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Liuwei (“Joanna”) Zheng constructed a <strong>VGG-16</strong> convolutional network in TensorFlow / Keras, trained on the classic <em>MNIST</em> dataset.  
+    After zero-padding, 32 × 32 resizing and pixel normalisation, the model attains a striking <strong>99.4 % test-set accuracy</strong>, positioning it among the top performers on this benchmark. :contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/oddrationale/mnist-in-csv" target="_blank">MNIST Dataset</a>
+  <a href="https://github.com/Januarymyhat/py_mnistVgg" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Joanna_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Adopted <strong>stacked 3 × 3 kernels</strong>, stride 1 + same-padding to deepen receptive fields without parameter bloat. :contentReference[oaicite:1]{index=1}</li>
+    <li>Inserted <em>Batch Normalisation</em> after every conv layer to speed convergence and curb over-fitting.</li>
+    <li>Achieved a final evaluation of <strong>loss = 0.054 · accuracy = 99.2 %</strong> on held-out test digits. :contentReference[oaicite:2]{index=2}</li>
+    <li>Packaged a <strong>PyQt5 / Tkinter GUI</strong> and OpenCV pipeline: users can scribble digits or upload photos; the app segments strokes, predicts each digit, and returns results in &lt; 0.1 s.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Overall accuracy&nbsp;:</strong> 99.4 %</li>
+    <li><strong>Average Precision / Recall / F1&nbsp;:</strong> 0.994 / 0.994 / 0.994</li>
+    <li><strong>ROC–AUC&nbsp;:</strong> ≈ 1.00 across all ten classes</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Model confidence drops on very faint or light-coloured strokes. :contentReference[oaicite:3]{index=3}</li>
+    <li>Current GUI occasionally shuffles slice order when processing multi-digit photos.</li>
+    <li>Hand-written digits larger than the padded 32 × 32 window may be partially cropped.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Add adaptive thresholding &amp; dilation to better capture faint ink.</li>
+    <li>Upgrade to <em>MobileNetV3-Small</em> to enable on-device inference.</li>
+    <li>Integrate sequence-to-sequence decoding for free-form cheque or form recognition.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Liuwei Zheng · Hand-written Digit Recognition Project
+</footer>
+
+</body>
+</html>
