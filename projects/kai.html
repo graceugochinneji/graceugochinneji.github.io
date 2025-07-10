@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Fall Detection with YOLO + OpenPose & CNN Ensemble | Zhang Zhirui</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster button tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Human Fall Detection System using Deep Learning</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    This project tackles the growing need for rapid, reliable fall detection among older adults.
+    Zhang Zhirui (Kai) combines <strong>YOLO v7 object detection</strong> and <strong>OpenPose</strong> key-point tracking
+    with a dual-channel CNN ensemble to recognise falls in real time and alert caregivers.
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/harlfoxem/fall-detection-person" target="_blank">Fall-Detection Dataset</a>
+  <a href="https://github.com/kaizhang1/Fall-detection-system" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Kai_PPT.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Pre-processing pipeline with <em>YOLO v7</em> + <em>OpenPose</em> to isolate bodies and 18 skeletal key-points.</li>
+    <li>Two-channel sliding-window model: dynamic features (centre-of-mass & limb velocities) + static contour features.</li>
+    <li>Ensemble of <strong>ResNet-with-Channel & Spatial Attention</strong> and a custom <strong>Kai_CNN</strong> branch.</li>
+    <li>MLP + Random Forest classifiers fuse feature streams for robust fall / non-fall discrimination.</li>
+    <li>Grad-CAM visualisations and a Tkinter GUI deliver interpretable, operator-friendly feedback.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Ensemble Accuracy:</strong> 99 %</li>
+    <li><strong>Precision / Recall / F1:</strong> 0.99 / 0.99 / 0.99</li>
+    <li><strong>ROC-AUC & PR-AUC:</strong> 1.00 (perfect separation)</li>
+    <li>Outperforms baseline ResNet50, VGG16, EfficientNetB0 and MobileNet by&nbsp;≥ 15 %.</li>
+  </ul>
+  <p>
+    The high sensitivity ensures virtually every real fall is caught, while a 96 %+ specificity keeps false alarms rare—
+    ideal for in-home or clinical monitoring.
+  </p>
+</section>
+
+<section>
+  <h2>Conclusion</h2>
+  <p>
+    By fusing pose-based dynamics with appearance cues, the system achieves state-of-the-art fall detection on modest
+    GPU hardware, laying the groundwork for affordable, scalable elder-care solutions.
+  </p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Dataset sourced from a single environment—domain shift to new camera angles or lighting untested.</li>
+    <li>Extreme occlusions or crowded scenes may reduce accuracy.</li>
+    <li>Current pipeline requires an RTX-class GPU for real-time processing.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Add transformer-based pose models for better occlusion handling.</li>
+    <li>Deploy compressed (pruned / quantised) networks to edge devices (Jetson, Raspberry Pi + NPU).</li>
+    <li>Integrate temporal LSTM layers to further stabilise predictions over video streams.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Zhang Zhirui (Kai). Fall-Detection Research Project.
+</footer>
+
+</body>
+</html>
