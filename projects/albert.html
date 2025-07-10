@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIRA-Net for Breast-Cancer Diagnosis | Albert Wu</title>
+  <style>
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,#e0f7fa,#fce4ec);
+      color:#333;margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:#fff;box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,#00acc1,#ec407a);
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;}
+    h2{color:#00796b;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+    .button-group{text-align:center;margin:20px;}
+    .button-group a{
+      padding:10px 20px;margin:5px;
+      background-color:#00acc1;color:#fff;
+      border-radius:5px;text-decoration:none;
+      transition:background-color .3s;
+    }
+    .button-group a:nth-child(3){background-color:#ec407a;} /* poster tint */
+    .button-group a:hover{opacity:.9;}
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:#00acc1;font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DIRA-Net — Depthwise Inception-ResNet with Attention<br>for Breast-Cancer Diagnosis</h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Albert Wu introduces <strong>DIRA-Net</strong>, a hybrid CNN that fuses Inception-V4,
+    ResNet skip connections, depthwise separable convolutions, and a
+    channel-&amp;-spatial attention block in the STEM stage.
+    The network is trained on BreakHis histopathology slides (40×) to
+    differentiate <em>benign</em> versus <em>malignant</em> tissue with high precision.:contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/ambarish/breakhis" target="_blank">BreakHis Dataset</a>
+  <a href="https://github.com/albertwu/DIRA-Net" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Albert_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Integrated depthwise convolutions inside Inception-ResNet Block A to cut FLOPs while preserving detail.</li>
+    <li>Added a CBAM-style attention module to the STEM block for fine-grained focus on tumor regions.</li>
+    <li>Balanced BreakHis classes via oversampling and heavy augmentation; images resized to 224 × 224.:contentReference[oaicite:1]{index=1}</li>
+    <li>Achieved <strong>96.45 % accuracy</strong>, <strong>93 % AUC</strong>, and <strong>92.14 % F1-score</strong> on held-out data.:contentReference[oaicite:2]{index=2}</li>
+    <li>Released a Flask web demo with Grad-CAM &amp; SHAP visualisations for clinical interpretability.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy :</strong> 96.45 %</li>
+    <li><strong>Sensitivity :</strong> 0.968  <strong>Specificity :</strong> 0.977</li>
+    <li><strong>F1-Score :</strong> 0.921  <strong>AUC :</strong> 0.93</li>
+  </ul>
+  <p>
+    DIRA-Net surpasses VGG-16, ResNet-50 and EfficientNet-B0 baselines previously reported on the same dataset.:contentReference[oaicite:3]{index=3}
+  </p>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Trained on a single-centre dataset; domain shift across labs remains untested.</li>
+    <li>400× images demand a mid-range GPU for <8 h convergence.:contentReference[oaicite:4]{index=4}</li>
+    <li>Bias mitigation for under-represented subtypes still pending.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Cross-institution validation with multi-magnification slides.</li>
+    <li>Knowledge-distillation to a mobile-size model for point-of-care microscopes.</li>
+    <li>Self-supervised pre-training to shrink annotated-data requirements.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Albert Wu. DIRA-Net Breast-Cancer Research Project.
+</footer>
+
+</body>
+</html>
