@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Ensemble CNN for Alzheimer’s MRI Classification | Leslie (Liu Yue)</title>
+
+  <!-- =========  PALETTE  ========= -->
+  <style>
+    :root{
+      --bg-start:#f0f7ff;     /* light blue  */
+      --bg-end:  #f9f5ff;     /* light lavender */
+      --brand-main:#5b8def;   /* cornflower-blue */
+      --brand-accent:#a55adf; /* soft purple    */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    /* =========  LAYOUT  ========= */
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* =========  BUTTONS  ========= */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 20px;margin:4px 3px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:background .3s;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.9;}
+
+    /* =========  FOOTER  ========= */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Ensemble Learning&nbsp;for Accurate<br>Alzheimer’s MRI Classification</h1>
+</header>
+
+<section>
+  <h2>Project&nbsp;Overview</h2>
+  <p>
+    Leslie (Liu Yue) built an <strong>ensemble CNN</strong> that merges&nbsp;ResNet-50, AlexNet and MobileNet
+    to diagnose Alzheimer’s disease from axial MRI slices.  
+    Combining the complementary strengths of the three backbones lifts performance and guards
+    against the occasional failure of any single model, reaching a top accuracy of&nbsp;<strong>98.2 %</strong> on a
+    four-class task (non-, very-mild, mild and moderate dementia).
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/adhirajkumar/alzheimer-mri-dataset" target="_blank">MRI Dataset</a>
+  <a href="https://github.com/LeslieLiu/Alzheimer-Ensemble" target="_blank">GitHub&nbsp;Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/Leslie_Poster.pdf" download>Download&nbsp;Poster</a>
+</div>
+
+<section>
+  <h2>Key&nbsp;Contributions</h2>
+  <ul>
+    <li>Fine-tuned <strong>ResNet-50</strong>, <strong>AlexNet</strong> and <strong>MobileNet</strong> on&nbsp;33 984 MRI slices (train : val : test ≈ 60 : 20 : 20).</li>
+    <li>Used <em>Bagging</em> to balance classes and combined model outputs with majority voting.</li>
+    <li>Achieved 98.2 % accuracy &nbsp;(<em>Macro&nbsp;F1 = 0.982</em>)—a 3-4 pp lift over the best individual network.</li>
+    <li>Packaged a <strong>Flask&nbsp;GUI</strong> that loads DICOM/JPEG scans and displays the ensemble’s prediction &amp; probabilities.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results&nbsp;Snapshot</h2>
+  <ul>
+    <li><strong>Accuracy&nbsp;:</strong> 98.2 %</li>
+    <li><strong>Macro&nbsp;Precision / Recall / F1&nbsp;:</strong> 0.98 / 0.98 / 0.98</li>
+    <li><strong>AUC&nbsp;:</strong> 0.996  <strong>Inference time&nbsp;:</strong> 42 ms per slice (GPU)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>MRI data from a single scanner → needs cross-centre validation for domain robustness.</li>
+    <li>False positives on severe motion-blur slices.</li>
+    <li>Ensemble (~83 M params) still heavy for edge deployment.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future&nbsp;Work</h2>
+  <ul>
+    <li>Distil the ensemble into a lightweight mobile model.</li>
+    <li>Add attention to highlight hippocampal atrophy regions.</li>
+    <li>Incorporate clinical metadata for multi-modal prognosis.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Leslie (Liu Yue) — Ensemble CNN Alzheimer’s Project
+</footer>
+
+</body>
+</html>
