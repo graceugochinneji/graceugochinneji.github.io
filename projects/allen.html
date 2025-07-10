@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Identification of handwritten English alphabet using 
+Convolution Neural Network| Yiqi Leng</title>
+
+  <!-- =====  PALETTE  (butter-yellow → teal)  ===== -->
+  <style>
+    :root{
+      --bg-start:#fffae9;      /* butter-cream      */
+      --bg-end:  #e8fbf9;      /* very-light teal   */
+      --brand-main:#d2b42c;    /* warm goldenrod    */
+      --brand-accent:#2ca89d;  /* calm teal         */
+      --text-main:#333;
+      --card-bg:#ffffff;
+    }
+
+    body{
+      font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+      background:linear-gradient(to right,var(--bg-start),var(--bg-end));
+      color:var(--text-main);margin:0;padding:0;
+    }
+    header,section{
+      padding:20px;margin:20px;border-radius:12px;
+      background:var(--card-bg);
+      box-shadow:0 4px 8px rgba(0,0,0,.1);
+    }
+    header{
+      background:linear-gradient(to right,var(--brand-main),var(--brand-accent));
+      color:#fff;text-align:center;
+    }
+    h1{margin:0;padding:10px 0;line-height:1.3;}
+    h2{color:#00796b;margin-top:0.5rem;}
+    ul{padding-left:20px;}
+    li{margin-bottom:8px;}
+
+    /* buttons */
+    .button-group{text-align:center;margin:20px 0;}
+    .button-group a{
+      display:inline-block;padding:10px 22px;margin:4px;
+      background:var(--brand-main);color:#fff;border-radius:5px;
+      text-decoration:none;transition:opacity .25s ease;
+    }
+    .button-group a:nth-child(3){background:var(--brand-accent);} /* poster */
+    .button-group a:hover{opacity:.88;}
+
+    /* footer */
+    footer{
+      text-align:center;padding:15px;color:#fff;
+      background:var(--brand-main);font-size:.9em;margin-top:40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Identification of handwritten English alphabet<br>using 
+Convolution Neural Network/h1>
+</header>
+
+<section>
+  <h2>Project Overview</h2>
+  <p>
+    Yiqi Leng built a 16-layer <strong>VGG-based CNN</strong> that learns to recognise
+    all&nbsp;47 classes in the <em>EMNIST Balanced</em> dataset (upper-, lower-case letters &amp; digits).
+    After 20 epochs of training with batch-normalisation, dropout&nbsp;0.5 and Adam
+    (LR = 1 × 10<sup>-4</sup>), the network reaches a remarkable
+    <strong>99.28 % accuracy</strong> on 18 800 held-out test images. :contentReference[oaicite:0]{index=0}
+  </p>
+</section>
+
+<div class="button-group">
+  <a href="https://www.kaggle.com/datasets/crawford/emnist" target="_blank">EMNIST Dataset</a>
+  <a href="https://github.com/YiqiLeng/Alphabet-VGG16" target="_blank">GitHub Repo</a>
+  <a href="https://graceugochinneji.github.io/Poster/allen_Poster.pdf" download>Download Poster</a>
+</div>
+
+<section>
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>Designed a deep VGG-16 pipeline (13 conv + 3 FC) with small 3 × 3 kernels and max-pooling.</li>
+    <li>Used EMNIST Balanced (112 800 train / 18 800 test) with on-the-fly normalisation.</li>
+    <li>Implemented dropout and L<sub>2</sub> regularisation to avoid over-fitting; training + validation losses converge smoothly.</li>
+    <li>Delivered a <strong>Tkinter GUI</strong> where users can upload an image or scribble a letter for instant prediction.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Results Snapshot</h2>
+  <ul>
+    <li><strong>Test accuracy :</strong> 99.28 %</li>
+    <li><strong>Precision / Recall / F1 :</strong> 0.993 / 0.993 / 0.993</li>
+    <li><strong>ROC-AUC :</strong> ≈ 1.00 across 47 classes</li>
+    <li><strong>Confusion-matrix errors :</strong> &lt; 0.7 % mis-classifications overall</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Limitations</h2>
+  <ul>
+    <li>Model confidence drops on extremely faint strokes or oversized blobs.</li>
+    <li>No explicit bias-check across handwriting styles; domain shift to cursive remains untested.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Future Work</h2>
+  <ul>
+    <li>Port to <em>MobileNetV3-Small</em> for on-device OCR.</li>
+    <li>Add adaptive thresholding to boost performance on low-contrast ink.</li>
+    <li>Extend to multilingual alphabets (Greek, Cyrillic) with transfer-learning.</li>
+  </ul>
+</section>
+
+<footer>
+  © 2025 Yiqi Leng · Hand-Written Alphabet Recognition Project
+</footer>
+
+</body>
+</html>
