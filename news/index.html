@@ -345,48 +345,48 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
   <!-- Dynamic Image Loader -->
-  <script>
-    const imageFolder = "https://graceugochinneji.github.io/news_photos/";
-    const imageList = [
-      { filename: "event1.JPG", caption: "2025 Graduation Photo with Dr. Grace's Project Students" },
-      { filename: "event2.JPG", caption: "Tech Show – 2023" },
-      { filename: "event3.JPG", caption: "Tech Show – 2024" },
-      { filename: "event4.JPG", caption: "Tech Show – 2025" }
-      
-    ];
+ <script>
+  const imageFolder = "https://graceugochinneji.github.io/news_photos/";
+  const imageList = [
+    { filename: "event1.JPG", caption: "2025 Graduation Photo with Dr. Grace's Project Students" },
+    { filename: "event2.JPG", caption: "Tech Show – 2023" },
+    { filename: "event3.JPG", caption: "Tech Show – 2024" },
+    { filename: "event4.JPG", caption: "Tech Show – 2025" }
+  ];
 
-    const wrapper = document.getElementById("swiper-wrapper");
-    imageList.forEach(img => {
-      const slide = document.createElement("div");
-      slide.className = "swiper-slide";
-      slide.innerHTML = `
-        <a href=" " data-lightbox="events" data-title="${img.caption}">
-          < img src="${imageFolder}${img.filename}" alt="${img.caption}" />
-          <div class="caption">${img.caption}</div>
-        </a >
-      `;
-      wrapper.appendChild(slide);
-    });
+  const wrapper = document.getElementById("swiper-wrapper");
+  imageList.forEach(img => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+    slide.innerHTML = `
+      <a href="${imageFolder}${img.filename}" data-lightbox="events" data-title="${img.caption}">
+        <img src="${imageFolder}${img.filename}" alt="${img.caption}" />
+        <div class="caption">${img.caption}</div>
+      </a>
+    `;
+    wrapper.appendChild(slide);
+  });
 
-    const swiper = new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 4500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      effect: "fade",
-      fadeEffect: {
-        crossFade: true
-      }
-    });
-  </script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    effect: "fade",
+    fadeEffect: {
+      crossFade: true
+    }
+  });
+</script>
+
 </body>
 </html>
